@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: hsl(229, 23%, 23%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(185, 75%, 39%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 75%, 70%;
+  background-position: top -47rem left -100%, bottom -54rem right -50%;
+}
+
+main {
+  margin: 10rem;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 22rem;
+  height: 23.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top {
+  background-image: url(../images/bg-pattern-card.svg);
+  background-size: 100%;
+  flex: 1;
+  position: relative;
+}
+
+.container img {
+  border-radius: 50%;
+  border: 0.3rem solid white;
+  position: absolute;
+  top: 62%;
+  left: 35%;
+}
+
+.mid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  border-bottom: 0.5px solid hsl(0, 0%, 59%);
+}
+
+.mid h1 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0 0;
+}
+
+.mid span {
+  font-weight: 400;
+  color: hsl(0, 0%, 59%);
+}
+
+.mid p {
+  margin-bottom: 0.7rem;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 59%);
+}
+
+.bottom {
+  flex: 0.65;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.bottom h3 {
+  font-weight: 700;
+}
+
+.bottom h4 {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 59%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: 180%;
+    background-position: top -25rem left -30rem, bottom -25rem right -32rem;
+  }
+
+  .container {
+    width: 22.6rem;
+    height: 25.7rem;
+  }
+
+  main {
+    margin: 5rem;
+  }
+}
