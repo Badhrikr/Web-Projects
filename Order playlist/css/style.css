@@ -103,8 +103,13 @@ body {
 
 .payment {
   width: 100%;
+}
+
+.payment a {
+  width: 100%;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 
 .button {
@@ -120,11 +125,12 @@ body {
 }
 
 .button:hover {
-  background-color: rgba(56, 41, 224, 0.089);
+  background-color: rgba(56, 41, 224, 0.308);
   color: black;
 }
 
-.cancel {
+.cancel a {
+  text-decoration: none;
   color: hsl(225, 13%, 48%);
   font-weight: 900;
   display: flex;
