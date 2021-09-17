@@ -140,6 +140,20 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+@media screen and (max-width: 1440px) {
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 30%;
+  }
+
+  .container > * {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   body {
     background-size: 180%;
