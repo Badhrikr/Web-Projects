@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container > * {
+  margin-bottom: 2.5rem;
+}
+
+.hero {
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.order {
+  text-align: center;
+}
+
+.order h1 {
+  color: hsl(223, 47%, 23%);
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+.order p {
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: hsl(225, 13%, 48%);
+}
+
+.plan {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.plan_card {
+  padding: 1.5rem;
+  width: 80%;
+  border-radius: 0.5rem;
+  background-color: hsl(230, 46%, 95%);
+  display: flex;
+  align-items: center;
+}
+
+.plan_card .change {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.plan_card img {
+  margin-right: 1rem;
+}
+
+.plan_card .plan_details h2 {
+  margin-bottom: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.plan_card .plan_details p {
+  color: hsl(225, 13%, 48%);
+}
+
+.plan_card .change span a {
+  color: hsl(245, 75%, 52%);
+  font-weight: 900;
+}
+
+.payment {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 5px 10px hsl(245, 75%, 52%);
+  background-color: hsl(245, 75%, 52%);
+  transition: background-color 450ms ease-in-out, color 450ms ease-in-out;
+}
+
+.button:hover {
+  background-color: rgba(56, 41, 224, 0.089);
+  color: black;
+}
+
+.cancel {
+  color: hsl(225, 13%, 48%);
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-size: 180%;
+  }
+  .container {
+    width: 100%;
+    margin: auto 1rem;
+  }
+
+  .container > * {
+    margin-bottom: 1rem;
+  }
+}
