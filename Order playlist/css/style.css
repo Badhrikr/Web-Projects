@@ -16,6 +16,7 @@ body {
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -128,6 +129,15 @@ body {
   font-weight: 900;
   display: flex;
   justify-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  justify-self: flex-end;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media screen and (max-width: 767px) {
