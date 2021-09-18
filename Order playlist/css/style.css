@@ -6,7 +6,7 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   min-height: 100vh;
   background-color: hsl(225, 100%, 94%);
   background-image: url("../images/pattern-background-desktop.svg");
@@ -103,13 +103,19 @@ body {
 
 .payment {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .payment a {
   width: 100%;
-  display: flex;
-  justify-content: center;
   text-decoration: none;
+}
+
+.payment a h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
 }
 
 .button {
@@ -117,16 +123,13 @@ body {
   border-radius: 0.5rem;
   padding: 1rem;
   text-align: center;
-  color: white;
-  font-weight: 700;
   box-shadow: 0 5px 10px hsl(245, 75%, 52%);
   background-color: hsl(245, 75%, 52%);
-  transition: background-color 450ms ease-in-out, color 450ms ease-in-out;
+  transition: background-color 450ms ease-in-out;
 }
 
 .button:hover {
   background-color: rgba(56, 41, 224, 0.308);
-  color: black;
 }
 
 .cancel a {
