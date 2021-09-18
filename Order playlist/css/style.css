@@ -115,13 +115,19 @@ body {
 .payment a h2 {
   font-size: 1rem;
   font-weight: 700;
+  padding: 1rem;
+  width: 100%;
   color: white;
+  transition: color 450ms ease-in-out;
+}
+
+a h2:hover {
+  color: black;
 }
 
 .button {
   width: 80%;
   border-radius: 0.5rem;
-  padding: 1rem;
   text-align: center;
   box-shadow: 0 5px 10px hsl(245, 75%, 52%);
   background-color: hsl(245, 75%, 52%);
