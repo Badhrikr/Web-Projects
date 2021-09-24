@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  color: white;
+  font-size: 0.938rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.5rem;
+  width: 78%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  padding: 0 4.5rem;
+}
+
+.box {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.primary {
+  width: 100%;
+}
+
+.primary h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.primary h1 span {
+  color: hsl(277, 64%, 61%);
+}
+
+.primary p {
+  width: 80%;
+  font-size: 0.9rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 23px;
+}
+
+.offer {
+  width: 82%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer div {
+  text-align: left;
+}
+
+.offer p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-top: 0.5rem;
+}
+
+.image {
+  position: relative;
+}
+
+.image::after {
+  content: "";
+  background-color: rgba(75, 0, 122, 0.6);
+  position: absolute;
+  inset: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin: 5em auto;
+    width: 84%;
+    overflow: visible;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .content {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+
+  .box {
+    height: 100%;
+  }
+
+  .primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .primary h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  .primary p {
+    text-align: center;
+    width: 95%;
+  }
+
+  .image {
+    background-color: red;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .image img {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .offer {
+    margin-top: 2.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer div {
+    margin-bottom: 2em;
+  }
+
+  .offer h2 {
+    text-align: center;
+  }
+
+  .attribution {
+    transform: translateY(-30px);
+  }
+}
