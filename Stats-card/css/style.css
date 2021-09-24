@@ -102,6 +102,17 @@ body {
   inset: 0;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  transform: translateY(50px);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 @media screen and (max-width: 375px) {
   .container {
     margin: 5em auto;
