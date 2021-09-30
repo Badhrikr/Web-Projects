@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200vh;
+  min-height: 150vh;
+  font-size: 0.938rem;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+  width: 90%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.box {
+  padding: 3rem;
+}
+
+.box h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: hsl(0, 0%, 95%);
+}
+
+.box p {
+  font-size: 0.9rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+}
+
+.box div {
+  display: inline-block;
+  width: 60%;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 100px;
+  background-color: hsl(0, 0%, 95%);
+  transition: background-color 250ms ease-in-out, border 250ms ease-in-out;
+}
+
+.box div:hover {
+  border: 2px solid hsl(0, 0%, 95%);
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.box div:hover p {
+  color: hsl(0, 0%, 95%);
+}
+
+.box > * {
+  margin-bottom: 1.8rem;
+}
+
+.box > div {
+  margin: 0;
+}
+
+.sedan {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.sedan div p {
+  color: hsl(31, 77%, 52%);
+  transition: color 450ms ease-in-out;
+}
+
+.suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.suv div p {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.luxury div p {
+  color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    width: 64%;
+    height: 61.5%;
+  }
+
+  .box > * {
+    margin-bottom: 2rem;
+  }
+
+  .box h1 {
+    font-size: 2.5rem;
+  }
+
+  .box > p {
+    margin-bottom: 5rem;
+  }
+
+  .box div {
+    width: 70%;
+    padding: 0.8rem;
+  }
+}
