@@ -14,9 +14,9 @@ p {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: 160vh;
   font-size: 1rem;
   font-family: "Karla", sans-serif;
   background-color: hsl(204, 43%, 93%);
@@ -144,6 +144,10 @@ section {
 }
 
 @media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
   .container {
     display: grid;
     grid-template-columns: 50% 50%;
