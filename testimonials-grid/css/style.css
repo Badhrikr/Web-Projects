@@ -107,21 +107,29 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
-#dark {
+.kira h2,
+.jeanette h2 {
   color: hsl(217, 19%, 35%);
 }
 
-span#dark {
+.kira div h1,
+.jeanette div h1 {
+  color: hsl(217, 19%, 35%);
+}
+
+.kira div h1 span,
+.jeanette div h1 span {
   color: hsla(217, 19%, 35%, 50%);
 }
 
-p#dark {
-  width: 93.6%;
-  color: hsla(217, 19%, 35%, 70%);
+.jeanette h2 {
+  width: 95%;
 }
 
-h2#dark {
-  width: 95%;
+.kira p,
+.jeanette p {
+  width: 93.6%;
+  color: hsla(217, 19%, 35%, 70%);
 }
 
 .attribution {
