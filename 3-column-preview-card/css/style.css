@@ -151,3 +151,36 @@ body {
     padding: 0.8rem;
   }
 }
+
+@media (min-width: 767px) and (max-width: 992px) {
+  body {
+    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    width: 820px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1439px) {
+  body {
+    height: 100vh;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    width: 820px;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .container {
+    width: 820px;
+    height: 500px;
+  }
+}
