@@ -211,3 +211,72 @@ section {
     transform: translateY(50px);
   }
 }
+
+@media (min-width: 767px) and (max-width: 1439px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45% 55%;
+    width: 660px;
+    height: 58vh;
+  }
+
+  .community {
+    display: block;
+    grid-column: 1/3;
+    padding: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+
+  .community h1 {
+    margin-bottom: 1.55rem;
+    font-size: 1.5rem;
+  }
+
+  .community h2 {
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+  }
+
+  .community p {
+    font-size: 1rem;
+  }
+
+  .community p span {
+    display: block;
+  }
+
+  .plan {
+    padding: 2.6rem;
+    padding-bottom: 0;
+    border-radius: 0 0 0 0.5rem;
+  }
+
+  .plan p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  .plan div {
+    transform: translateY(30px);
+  }
+
+  .about {
+    padding: 2.6rem;
+    border-radius: 0 0 0.5rem 0;
+  }
+
+  .about p {
+    width: 85%;
+    line-height: 1.3rem;
+  }
+
+  .attribution {
+    transform: translateY(50px);
+  }
+}
