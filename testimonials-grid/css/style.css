@@ -140,6 +140,7 @@ h2#dark {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
     width: 75%;
+    height: 70%;
   }
 
   .box div {
@@ -185,6 +186,7 @@ h2#dark {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
     width: 1080px;
+    height: 70%;
   }
 
   .box div {
@@ -230,6 +232,7 @@ h2#dark {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
     width: 1080px;
+    height: 70%;
   }
 
   .box div {
