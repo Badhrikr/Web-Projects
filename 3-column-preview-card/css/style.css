@@ -31,14 +31,14 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 200vh;
-  min-height: 150vh;
+  min-height: 100vh;
   font-size: 0.938rem;
   background-color: hsl(0, 0%, 95%);
 }
 
 .container {
   width: 90%;
+  margin: 4em auto;
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -66,11 +66,11 @@ body {
   text-align: center;
   border-radius: 100px;
   background-color: hsl(0, 0%, 95%);
-  transition: background-color 250ms ease-in-out, border 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out, outline 250ms ease-in-out;
 }
 
 .box div:hover {
-  border: 2px solid hsl(0, 0%, 95%);
+  outline: 2px solid hsl(0, 0%, 95%);
   background-color: inherit;
   cursor: pointer;
 }
@@ -123,7 +123,6 @@ body {
 
 @media screen and (min-width: 1440px) {
   body {
-    height: 100vh;
     min-height: 100vh;
     justify-content: center;
   }
@@ -149,38 +148,5 @@ body {
   .box div {
     width: 70%;
     padding: 0.8rem;
-  }
-}
-
-@media (min-width: 767px) and (max-width: 992px) {
-  body {
-    height: 100vh;
-    min-height: 100vh;
-    justify-content: center;
-  }
-
-  .container {
-    display: flex;
-    width: 820px;
-  }
-}
-
-@media (min-width: 993px) and (max-width: 1439px) {
-  body {
-    height: 100vh;
-    min-height: 100vh;
-    justify-content: center;
-  }
-
-  .container {
-    display: flex;
-    width: 820px;
-  }
-}
-
-@media (min-width: 1600px) and (max-width: 1920px) {
-  .container {
-    width: 820px;
-    height: 500px;
   }
 }
