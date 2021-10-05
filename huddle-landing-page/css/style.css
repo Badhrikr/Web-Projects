@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h1,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.huddle {
+  width: 35vw;
+  margin-block: 2em;
+}
+
+.mockup {
+  max-width: 80vw;
+  margin-block: 4em;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary {
+  width: 80%;
+  text-align: center;
+  color: white;
+}
+
+.description {
+  width: 87%;
+  margin-block: 1em;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  line-height: 1.6rem;
+  color: white;
+}
+
+.register {
+  width: 58%;
+  margin-block: 0.5em;
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: hsl(257, 40%, 49%);
+  background-color: white;
+  border-radius: 2rem;
+  transition: background-color 450ms ease-in-out, outline 450ms ease-in-out,
+    color 450ms ease-in-out;
+}
+
+.register:hover {
+  background-color: hsl(257, 40%, 49%);
+  outline: 2px solid white;
+  color: white;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.social svg {
+  width: 50%;
+}
+
+.summa {
+  fill: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    background-image: url(../images/bg-desktop.svg);
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2em 5em;
+  }
+
+  .huddle {
+    width: 15vw;
+  }
+
+  .mockup {
+    width: 49vw;
+  }
+
+  .wrapper {
+    display: block;
+    padding: 2.6rem;
+  }
+
+  .summary {
+    width: 100%;
+    font-size: 1.7rem;
+    text-align: left;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 1.08rem;
+    text-align: left;
+  }
+
+  .register {
+    width: 38%;
+    font-size: 1rem;
+  }
+
+  footer {
+    width: 100%;
+    transform: translateY(-90px);
+  }
+
+  .social {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .social img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  body {
+    background-size: 100%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1439px) {
+  body {
+    background-size: 100%;
+  }
+}
