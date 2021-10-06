@@ -94,12 +94,8 @@ body {
   list-style: none;
 }
 
-.social svg {
+.social img {
   width: 50%;
-}
-
-.summa {
-  fill: white;
 }
 
 .attribution {
