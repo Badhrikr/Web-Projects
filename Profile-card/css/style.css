@@ -16,19 +16,31 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background-color: hsl(185, 75%, 39%);
   min-height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../images/bg-pattern-top.svg),
-    url(../images/bg-pattern-bottom.svg);
-  background-repeat: no-repeat;
-  background-size: 75%, 70%;
-  background-position: top -47rem left -100%, bottom -54rem right -50%;
+}
+
+.first,
+.second {
+  position: absolute;
+}
+
+.first {
+  transform: translate(-35%, -55%);
+}
+
+.second {
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 65%);
 }
 
 main {
   margin: 10rem;
+  z-index: 2;
 }
 
 .container {
@@ -107,6 +119,7 @@ main {
 .attribution {
   font-size: 1rem;
   text-align: center;
+  z-index: 2;
 }
 
 .attribution a {
@@ -114,11 +127,6 @@ main {
 }
 
 @media only screen and (max-width: 768px) {
-  body {
-    background-size: 180%;
-    background-position: top -25rem left -30rem, bottom -25rem right -32rem;
-  }
-
   .container {
     width: 22.6rem;
     height: 25.7rem;
