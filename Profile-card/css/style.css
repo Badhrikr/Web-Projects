@@ -39,7 +39,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: min(353px, 85vw);
+  width: min(90vw, 353px);
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
@@ -121,8 +121,17 @@ body {
   body {
     background-position: top -510px left -260px, bottom -590px right -230px;
   }
+  .container {
+    min-width: 24.5vw;
+  }
 
   .details {
     padding: 0.4rem 1rem;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1920px) {
+  .container {
+    min-width: 20vw;
   }
 }
