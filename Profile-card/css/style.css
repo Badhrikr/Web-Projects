@@ -39,7 +39,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 85vw;
+  width: min(353px, 85vw);
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
@@ -120,9 +120,6 @@ body {
 @media screen and (min-width: 1440px) {
   body {
     background-position: top -510px left -260px, bottom -590px right -230px;
-  }
-  .container {
-    min-width: 24.5vw;
   }
 
   .details {
