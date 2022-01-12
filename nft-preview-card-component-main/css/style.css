@@ -44,6 +44,12 @@ body {
 .container h1 {
   font-size: 1.3rem;
   font-weight: 600;
+  transition: color 450ms ease-in-out;
+}
+
+.container h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
 
 .main_img {
@@ -51,6 +57,7 @@ body {
   height: 100%;
   object-fit: contain;
   border-radius: 0.5rem;
+  position: relative;
 }
 
 .description {
@@ -105,6 +112,12 @@ body {
 
 .profile p span {
   color: hsl(0, 0%, 100%);
+  transition: color 450ms ease-in-out;
+}
+
+.profile p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
 }
 
 .attribution {
