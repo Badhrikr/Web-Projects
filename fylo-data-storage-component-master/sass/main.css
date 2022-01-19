@@ -249,5 +249,16 @@ footer {
     left: 59%;
     bottom: 85%;
   }
+  .card__triangle {
+    display: block;
+    width: 20%;
+    height: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
 }
 /*# sourceMappingURL=main.css.map */

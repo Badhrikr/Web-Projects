@@ -226,5 +226,16 @@ footer {
       left: 59%;
       bottom: 85%;
     }
+
+    &__triangle {
+      display: block;
+      width: 20%;
+      height: 50%;
+      background-color: #ffffff;
+      position: absolute;
+      bottom: -30%;
+      right: 0;
+      clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
   }
 }
