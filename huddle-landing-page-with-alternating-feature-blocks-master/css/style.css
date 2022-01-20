@@ -304,13 +304,27 @@ body {
   height: auto;
 }
 
-.social_icons:hover {
-  cursor: pointer;
-}
-
 .social_media p {
   margin: 2em 0;
   font-size: 1.4rem;
+}
+
+.social_icons {
+  fill: #fff;
+}
+
+.social_icons:hover {
+  cursor: pointer;
+  animation: popup 450ms forwards;
+}
+
+@keyframes popup {
+  from {
+    fill: #fff;
+  }
+  to {
+    fill: hsl(322, 100%, 66%);
+  }
 }
 
 .attribution {
