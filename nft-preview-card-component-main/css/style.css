@@ -42,6 +42,8 @@ body {
 }
 
 .container h1 {
+  display: inline;
+  width: fit-content;
   font-size: 1.3rem;
   font-weight: 600;
   transition: color 450ms ease-in-out;
@@ -56,21 +58,6 @@ body {
   width: 100%;
   position: relative;
 }
-
-/* .card::before {
-  content: "";
-  transition: background-color 750ms ease-in-out;
-  overflow: hidden;
-}
-
-.card:hover::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 255, 247, 0.4);
-  cursor: pointer;
-  border-radius: 0.5rem;
-} */
 
 .main_img {
   width: 100%;
