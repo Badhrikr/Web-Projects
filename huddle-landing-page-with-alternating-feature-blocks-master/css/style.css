@@ -299,17 +299,14 @@ body {
   justify-content: flex-start;
 }
 
-.social_icons {
-  width: 50%;
-  height: auto;
-}
-
 .social_media p {
   margin: 2em 0;
   font-size: 1.4rem;
 }
 
 .social_icons {
+  width: 50%;
+  height: auto;
   fill: #fff;
 }
 
@@ -493,6 +490,23 @@ body {
 
   .social_icons {
     width: 25%;
+    height: auto;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1300px) {
+  .computer {
+    width: 80%;
+    height: auto;
+  }
+
+  .about_svg img {
+    width: 50%;
+    height: auto;
+  }
+
+  .social_icons {
+    width: 20%;
     height: auto;
   }
 }
