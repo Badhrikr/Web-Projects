@@ -77,7 +77,7 @@ body {
 
 .container .title span {
   display: block;
-  color: #a3a5ae;
+  color: #4c4e61;
   font-weight: 200;
 }
 
@@ -178,6 +178,15 @@ body {
     padding: 4em 2em 4em;
     position: relative;
   }
+  .container .title {
+    font-size: 3.1rem;
+  }
+  .container .content {
+    width: 60%;
+  }
+  .card__title {
+    font-size: 2rem;
+  }
   .card--cyan {
     position: absolute;
     top: 45%;
@@ -187,9 +196,6 @@ body {
     position: absolute;
     top: 45%;
     right: -3em;
-  }
-  .content {
-    width: 60%;
   }
 }
 /*# sourceMappingURL=main.css.map */
