@@ -1,0 +1,159 @@
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+$card-clr: hsl(0, 0%, 98%);
+$ft-pm-clr: hsl(234, 12%, 34%);
+$ft-clr: hsl(229, 6%, 66%);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: $card-clr;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 6em 2em;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    margin-bottom: 0.8em;
+    color: $ft-pm-clr;
+    font-size: 2.4rem;
+    span {
+      display: block;
+      color: $ft-clr;
+      font-weight: 200;
+    }
+  }
+
+  .content {
+    color: $ft-clr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 315px;
+  padding: 2em;
+  text-align: left;
+  background-color: $card-clr;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  &__title {
+    color: $ft-pm-clr;
+  }
+
+  &__des {
+    color: $ft-clr;
+    font-size: 1.2rem;
+  }
+
+  &__pic {
+    width: 25%;
+    height: auto;
+    align-self: flex-end;
+    margin-top: 0.5em;
+  }
+
+  &--cyan {
+    border-top: 0.5rem solid $Cyan;
+  }
+
+  &--red {
+    border-top: 0.5rem solid $Red;
+  }
+
+  &--orange {
+    border-top: 0.5rem solid $Orange;
+  }
+
+  &--blue {
+    border-top: 0.5rem solid $Blue;
+  }
+}
+
+.card:hover {
+  cursor: pointer;
+  animation: popup 750ms forwards;
+}
+
+@keyframes popup {
+  from {
+    transform: scale();
+  }
+
+  to {
+    transform: translateY(-1rem);
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding: 4em 2em 4em;
+    position: relative;
+  }
+
+  .card--cyan {
+    position: absolute;
+    top: 45%;
+    left: -3em;
+  }
+
+  .card--blue {
+    position: absolute;
+    top: 45%;
+    right: -3em;
+  }
+
+  .content {
+    width: 60%;
+  }
+}
