@@ -52,6 +52,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1.5em;
+  width: 85vw;
+  max-width: 315px;
   margin: 2em;
   padding: 1em 0.6em 2em;
   background-color: white;
@@ -86,10 +88,22 @@ body {
   text-align: center;
 }
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
 @media screen and (min-width: 1440px) {
   .card {
-    width: 315px;
-    margin: 0;
+    margin: 2em;
+  }
+  .card__des {
+    padding: 0 1em;
+    font-size: 1.6rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
