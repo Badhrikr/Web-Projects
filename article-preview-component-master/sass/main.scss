@@ -1,0 +1,243 @@
+$bg-clr: hsl(210, 46%, 95%);
+$ft-mn-clr: hsl(217, 19%, 35%);
+$ft-clr: hsl(212, 23%, 69%);
+$share-clr: hsl(214, 17%, 51%);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $bg-clr;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 88vw;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &__imgcontainer {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  &__picture {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 3.5em 3.5em 0;
+  }
+
+  &__title {
+    margin: 0;
+    color: $ft-mn-clr;
+    font-size: 1.65rem;
+    line-height: 1.5;
+  }
+
+  &__des {
+    margin: 0;
+    color: $share-clr;
+    font-size: 1.32rem;
+    line-height: 1.5;
+  }
+
+  &__profilebox {
+    width: 100%;
+  }
+
+  &__lists {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__avatar {
+    width: 40px;
+    aspect-ratio: 1/1;
+    margin-right: 2em;
+    border-radius: 50%;
+  }
+
+  &__avatarname {
+    color: $ft-mn-clr;
+    line-height: 1.5;
+
+    span {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: $ft-clr;
+    }
+  }
+
+  &__items:nth-child(3) {
+    margin: 0 0 0 auto;
+    padding: 1em;
+    background-color: $bg-clr;
+    border-radius: 50%;
+    z-index: 3;
+    transition: background-color 450ms ease-in;
+  }
+
+  &__items:nth-child(3):hover,
+  &__items:nth-child(3):focus {
+    cursor: pointer;
+    background-color: $share-clr;
+  }
+
+  #shareicon {
+    fill: #6e8098;
+    transition: fill 450ms ease-in;
+  }
+
+  &__items:nth-child(3):hover #shareicon,
+  &__items:nth-child(3):focus #shareicon {
+    fill: #ffffff;
+  }
+
+  &__sharebutton--active {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+    list-style: none;
+    background-color: $ft-mn-clr;
+    z-index: 2;
+  }
+
+  &__sharebutton_items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-inline: 0em;
+    h3 {
+      color: $ft-clr;
+      letter-spacing: 0.6rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__sharebutton_items > * {
+    margin-inline: 0.6em;
+    transition: transform 450ms ease-in;
+  }
+
+  &__sharebutton_items > *:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 50.5%;
+    position: static;
+
+    &__imgcontainer {
+      width: 100%;
+      height: 100%;
+      background-color: royalblue;
+      object-fit: cover;
+    }
+
+    &__picture {
+      width: 100%;
+      height: 100%;
+      object-position: left;
+      object-fit: cover;
+    }
+
+    &__content {
+      align-items: flex-start;
+      gap: 1em;
+      padding: 3em 3.5em 1.5em;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__des {
+      font-size: 1.3rem;
+    }
+
+    &__items:nth-child(3) {
+      border-radius: 50%;
+    }
+
+    &__sharebutton--active {
+      justify-content: center;
+      position: absolute;
+      top: 49.5%;
+      left: 62.7%;
+      width: 25rem;
+      aspect-ratio: 1/0.2;
+      padding: 1em;
+      border-radius: 1.2rem;
+    }
+
+    &__sharebutton--active::after {
+      content: "";
+      position: absolute;
+      top: 58%;
+      left: 45%;
+      width: 30px;
+      aspect-ratio: 1/1;
+      background-color: $ft-mn-clr;
+      clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+      transform: rotate(-45deg);
+    }
+  }
+}

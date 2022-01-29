@@ -1,0 +1,294 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+img {
+  display: block;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #ecf2f8;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 88vw;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card__imgcontainer {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card__picture {
+  width: 100%;
+  height: auto;
+}
+
+.card__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2em;
+  padding: 3.5em 3.5em 0;
+}
+
+.card__title {
+  margin: 0;
+  color: #48556a;
+  font-size: 1.65rem;
+  line-height: 1.5;
+}
+
+.card__des {
+  margin: 0;
+  color: #6d7f97;
+  font-size: 1.32rem;
+  line-height: 1.5;
+}
+
+.card__profilebox {
+  width: 100%;
+}
+
+.card__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card__avatar {
+  width: 40px;
+  aspect-ratio: 1/1;
+  margin-right: 2em;
+  border-radius: 50%;
+}
+
+.card__avatarname {
+  color: #48556a;
+  line-height: 1.5;
+}
+
+.card__avatarname span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #9eafc2;
+}
+
+.card__items:nth-child(3) {
+  margin: 0 0 0 auto;
+  padding: 1em;
+  background-color: #ecf2f8;
+  border-radius: 50%;
+  z-index: 3;
+  -webkit-transition: background-color 450ms ease-in;
+  transition: background-color 450ms ease-in;
+}
+
+.card__items:nth-child(3):hover, .card__items:nth-child(3):focus {
+  cursor: pointer;
+  background-color: #6d7f97;
+}
+
+.card #shareicon {
+  fill: #6e8098;
+  -webkit-transition: fill 450ms ease-in;
+  transition: fill 450ms ease-in;
+}
+
+.card__items:nth-child(3):hover #shareicon,
+.card__items:nth-child(3):focus #shareicon {
+  fill: #ffffff;
+}
+
+.card__sharebutton--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  list-style: none;
+  background-color: #48556a;
+  z-index: 2;
+}
+
+.card__sharebutton_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-inline: 0em;
+}
+
+.card__sharebutton_items h3 {
+  color: #9eafc2;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
+}
+
+.card__sharebutton_items > * {
+  margin-inline: 0.6em;
+  -webkit-transition: -webkit-transform 450ms ease-in;
+  transition: -webkit-transform 450ms ease-in;
+  transition: transform 450ms ease-in;
+  transition: transform 450ms ease-in, -webkit-transform 450ms ease-in;
+}
+
+.card__sharebutton_items > *:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+    width: 50.5%;
+    position: static;
+  }
+  .card__imgcontainer {
+    width: 100%;
+    height: 100%;
+    background-color: royalblue;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .card__picture {
+    width: 100%;
+    height: 100%;
+    -o-object-position: left;
+       object-position: left;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .card__content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1em;
+    padding: 3em 3.5em 1.5em;
+  }
+  .card__title {
+    font-size: 2rem;
+  }
+  .card__des {
+    font-size: 1.3rem;
+  }
+  .card__items:nth-child(3) {
+    border-radius: 50%;
+  }
+  .card__sharebutton--active {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 49.5%;
+    left: 62.7%;
+    width: 25rem;
+    aspect-ratio: 1/0.2;
+    padding: 1em;
+    border-radius: 1.2rem;
+  }
+  .card__sharebutton--active::after {
+    content: "";
+    position: absolute;
+    top: 58%;
+    left: 45%;
+    width: 30px;
+    aspect-ratio: 1/1;
+    background-color: #48556a;
+    -webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */
