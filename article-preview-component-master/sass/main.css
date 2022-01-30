@@ -123,10 +123,6 @@ main {
 }
 
 .card__profilebox {
-  width: 100%;
-}
-
-.card__lists {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,9 +133,6 @@ main {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .card__avatar {
@@ -161,30 +154,30 @@ main {
   color: #9eafc2;
 }
 
-.card__items:nth-child(3) {
-  margin: 0 0 0 auto;
+.card__button {
+  margin-left: auto;
   padding: 1em;
   background-color: #ecf2f8;
   border-radius: 50%;
-  z-index: 3;
+  border: none;
+  z-index: 4;
   -webkit-transition: background-color 450ms ease-in;
   transition: background-color 450ms ease-in;
 }
 
-.card__items:nth-child(3):hover, .card__items:nth-child(3):focus {
-  cursor: pointer;
+.card__button:hover, .card__button:focus {
   background-color: #6d7f97;
+}
+
+.card__button:hover #shareicon,
+.card__button:focus #shareicon {
+  fill: #ffffff;
 }
 
 .card #shareicon {
   fill: #6e8098;
   -webkit-transition: fill 450ms ease-in;
   transition: fill 450ms ease-in;
-}
-
-.card__items:nth-child(3):hover #shareicon,
-.card__items:nth-child(3):focus #shareicon {
-  fill: #ffffff;
 }
 
 .card__sharebutton--active {
@@ -199,46 +192,30 @@ main {
           align-items: center;
   position: absolute;
   bottom: 0;
-  left: 0;
   width: 100%;
-  margin: 0;
-  padding: 1.5rem;
-  list-style: none;
+  padding: 1.5em;
   background-color: #48556a;
   z-index: 2;
 }
 
-.card__sharebutton_items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-inline: 0em;
+.card__sharebutton--active > *:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.card__sharebutton_items h3 {
-  color: #9eafc2;
-  letter-spacing: 0.6rem;
-  text-transform: uppercase;
-}
-
-.card__sharebutton_items > * {
-  margin-inline: 0.6em;
+.card__sharebutton--active > * {
+  margin-inline: 1em;
   -webkit-transition: -webkit-transform 450ms ease-in;
   transition: -webkit-transform 450ms ease-in;
   transition: transform 450ms ease-in;
   transition: transform 450ms ease-in, -webkit-transform 450ms ease-in;
 }
 
-.card__sharebutton_items > *:hover {
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.card .sharebutton__title {
+  color: #9eafc2;
+  letter-spacing: 0.6rem;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 1440px) {
@@ -277,9 +254,6 @@ main {
   }
   .card__des {
     font-size: 1.3rem;
-  }
-  .card__items:nth-child(3) {
-    border-radius: 50%;
   }
   .card__sharebutton--active {
     -webkit-box-pack: center;

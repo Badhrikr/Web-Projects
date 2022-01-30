@@ -1,11 +1,23 @@
-let toggler = document.getElementsByClassName("togglerbutton");
-let media = document.getElementsByClassName("card__sharebutton--active");
+// let toggler = document.getElementsByClassName("card__button");
+// let media = document.getElementsByClassName("card__sharebutton--active");
 
-toggler.addEventListener('click', () =>{
-    if(media.style.display === 'none'){
-        media.style.display = 'block';
-    }
-    else{
-        media.style.display = 'none';
-    }
-})
+// const button = document.getElementsByClassName('card__button')[0];
+
+// const media = document.getElementsByClassName('card__sharebutton--active')[0];
+
+// toggler.addEventListener('click', () =>{
+//     if(media.style.display === 'none'){
+//         media.style.display = 'block';
+//     }
+//     else{
+//         media.style.display = 'none';
+//     }
+// })
+
+let toggler = document.querySelector("card__button")
+let media = document.querySelector("card__sharebutton--active");
+
+
+function toggle(){
+    media.style.display = 'none';
+}
