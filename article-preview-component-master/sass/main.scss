@@ -174,12 +174,12 @@ main {
     display: grid;
     grid-template-columns: 40% 60%;
     width: 50.5%;
-    position: static;
+    position: relative;
+    overflow: visible;
 
     &__imgcontainer {
       width: 100%;
       height: 100%;
-      background-color: royalblue;
       object-fit: cover;
     }
 
@@ -188,6 +188,7 @@ main {
       height: 100%;
       object-position: left;
       object-fit: cover;
+      border-radius: 1rem 0 0 1rem;
     }
 
     &__content {
@@ -208,7 +209,7 @@ main {
       justify-content: center;
       position: absolute;
       top: 49.5%;
-      left: 62.7%;
+      right: -9.8%;
       width: 25rem;
       aspect-ratio: 1/0.2;
       padding: 1em;

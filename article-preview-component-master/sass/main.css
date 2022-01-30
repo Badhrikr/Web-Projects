@@ -225,12 +225,12 @@ main {
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
     width: 50.5%;
-    position: static;
+    position: relative;
+    overflow: visible;
   }
   .card__imgcontainer {
     width: 100%;
     height: 100%;
-    background-color: royalblue;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -241,6 +241,7 @@ main {
        object-position: left;
     -o-object-fit: cover;
        object-fit: cover;
+    border-radius: 1rem 0 0 1rem;
   }
   .card__content {
     -webkit-box-align: start;
@@ -261,7 +262,7 @@ main {
             justify-content: center;
     position: absolute;
     top: 49.5%;
-    left: 62.7%;
+    right: -9.8%;
     width: 25rem;
     aspect-ratio: 1/0.2;
     padding: 1em;

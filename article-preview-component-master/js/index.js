@@ -14,10 +14,11 @@
 //     }
 // })
 
-let toggler = document.querySelector("card__button")
+let btn = document.querySelector("card__button")
 let media = document.querySelector("card__sharebutton--active");
 
 
 function toggle(){
-    media.style.display = 'none';
+    console.log("button")
+    console.log(btn)
 }
