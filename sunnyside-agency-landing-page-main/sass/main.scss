@@ -210,6 +210,25 @@ body {
   &__textoverlay {
     position: absolute;
     padding-bottom: 4em;
+
+    .card__deshead {
+      margin-bottom: 1em;
+      color: $photographytext;
+    }
+
+    .card__des {
+      color: $photographytext;
+    }
+  }
+
+  .cherry .card__textoverlay {
+    .card__deshead {
+      color: $graphicdesigntext;
+    }
+
+    .card__des {
+      color: $graphicdesigntext;
+    }
   }
 }
 
@@ -228,12 +247,6 @@ body {
     letter-spacing: 0.3rem;
     font-size: 1.4rem;
   }
-
-  // &__profile {
-  //   display: flex;
-  //   gap: 1.5em;
-  //   width: 100%;
-  // }
 
   &__profilebox {
     display: flex;
@@ -551,6 +564,31 @@ body {
         width: 11.5rem;
       }
     }
+
+    &__textoverlay {
+      padding-inline: 10em;
+
+      .card__deshead {
+        margin-bottom: 1em;
+        color: $photographytext;
+        font-size: 3rem;
+      }
+
+      .card__des {
+        color: $photographytext;
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  .cherry .card__textoverlay {
+    .card__deshead {
+      color: $graphicdesigntext;
+    }
+
+    .card__des {
+      color: $graphicdesigntext;
+    }
   }
 
   .egg {
@@ -573,7 +611,7 @@ body {
 
   .client {
     grid-column: 1/3;
-    min-height: 100vh;
+    min-height: 85vh;
 
     &__title {
       font-size: 2.2rem;
