@@ -1,24 +1,18 @@
-// let toggler = document.getElementsByClassName("card__button");
-// let media = document.getElementsByClassName("card__sharebutton--active");
+let socialmedia = document.querySelector(".card__sharebutton--active")
+let button = document.querySelector(".card__button")
+let toggle = true
 
-// const button = document.getElementsByClassName('card__button')[0];
+button.addEventListener('click', function(){
+    if (toggle == true){
+        socialmedia.style.display = "flex"
+        return toggle = false
+    }
+    else{
+        socialmedia.style.display = "none" 
+        return toggle = true
 
-// const media = document.getElementsByClassName('card__sharebutton--active')[0];
-
-// toggler.addEventListener('click', () =>{
-//     if(media.style.display === 'none'){
-//         media.style.display = 'block';
-//     }
-//     else{
-//         media.style.display = 'none';
-//     }
-// })
-
-let btn = document.querySelector("card__button")
-let media = document.querySelector("card__sharebutton--active");
+    }
+})
 
 
-function toggle(){
-    console.log("button")
-    console.log(btn)
-}
+

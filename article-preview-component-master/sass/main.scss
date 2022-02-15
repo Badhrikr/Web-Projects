@@ -49,7 +49,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 88vw;
   background-color: #ffffff;
   border-radius: 1rem;
@@ -72,7 +71,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 2em;
-    padding: 3.5em 3.5em 0;
+    padding: 3.5em 3.5em 1.5em;
   }
 
   &__title {
@@ -94,6 +93,9 @@ main {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    position: relative;
+    padding-inline: 3.5em;
+    padding-bottom: 1em;
   }
 
   &__avatar {
@@ -115,23 +117,24 @@ main {
     }
   }
 
-  &__button {
+  &__button__holder {
     margin-left: auto;
+  }
+
+  &__button {
     padding: 1em;
     background-color: $bg-clr;
     border-radius: 50%;
     border: none;
-    z-index: 4;
     transition: background-color 450ms ease-in;
+    z-index: 9999;
   }
 
-  &__button:hover,
-  &__button:focus {
+  &__button:hover {
     background-color: $share-clr;
   }
 
-  &__button:hover #shareicon,
-  &__button:focus #shareicon {
+  &__button:hover #shareicon {
     fill: #ffffff;
   }
 
@@ -145,11 +148,15 @@ main {
     justify-content: flex-start;
     align-items: center;
     position: absolute;
-    bottom: 0;
+    inset: 0;
     width: 100%;
     padding: 1.5em;
     background-color: $ft-mn-clr;
-    z-index: 2;
+    z-index: 0;
+  }
+
+  &__sharebutton--active {
+    display: none;
   }
 
   &__sharebutton--active > *:hover {
@@ -174,7 +181,6 @@ main {
     display: grid;
     grid-template-columns: 40% 60%;
     width: 50.5%;
-    position: relative;
     overflow: visible;
 
     &__imgcontainer {
@@ -205,12 +211,21 @@ main {
       font-size: 1.3rem;
     }
 
+    &__profilebox {
+      padding-bottom: 1.5em;
+    }
+
+    &__button__holder {
+      position: relative;
+    }
+
     &__sharebutton--active {
       justify-content: center;
-      position: absolute;
-      top: 49.5%;
-      right: -9.8%;
       width: 25rem;
+      position: absolute;
+      inset: unset;
+      top: -7rem;
+      right: -10.5rem;
       aspect-ratio: 1/0.2;
       padding: 1em;
       border-radius: 1.2rem;

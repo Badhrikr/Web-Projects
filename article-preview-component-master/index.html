@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
-  <link rel="stylesheet" href="sass/main.css">
+  <link rel="stylesheet" href="dist/css/main.css">
   
   <title>Frontend Mentor | Article preview component</title>
 
@@ -20,21 +20,25 @@
   <div class="card">
     <div class="card__imgcontainer"><img src="./images/drawers.jpg" alt="" aria-hidden="true" class="card__picture">
     </div>
-    <div class="card__content">
-      <h1 class="card__title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
-      <p class="card__des">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+    <div class="card__content__wrapper">
+      <div class="card__content">
+        <h1 class="card__title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+        <p class="card__des">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>
+      </div>
       <div class="card__profilebox">
         <img src="./images/avatar-michelle.jpg" alt="" class="card__avatar">
         <h2 class="card__avatarname">Michelle Appleton<span>28 Jun 2020</span></h2>
-        <button class="card__button" onclick="toggle()" aria-label="Click me">
-          <svg viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg" width="15" height="13" id="shareicon"><path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
-        </button>
-      </div>
-      <div class="card__sharebutton--active">
-        <h3 class="sharebutton__title">share</h3>
-        <a href="https://www.facebook.com/" target="_blank" class="sharebutton_links" aria-label="Facebook"><img src="./images/icon-facebook.svg" alt="" class="sharebutton__icons"></a>
-        <a href="https://twitter.com/badhrikr22" target="_blank" class="sharebutton_links" aria-label="Twitter"><img src="./images/icon-twitter.svg" alt="" class="sharebutton__icons"></a>
-        <a href="https://in.pinterest.com/" target="_blank" class="sharebutton_links" aria-label="Pinterest"><img src="./images/icon-pinterest.svg" alt="" class="sharebutton__icons"></a>
+        <div class="card__button__holder">
+          <button class="card__button" aria-label="Click me">
+            <svg viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg" width="15" height="13" id="shareicon"><path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          </button>
+          <div class="card__sharebutton--active">
+            <h3 class="sharebutton__title">share</h3>
+            <a href="https://www.facebook.com/" target="_blank" class="sharebutton_links" aria-label="Facebook"><img src="./images/icon-facebook.svg" alt="" class="sharebutton__icons"></a>
+            <a href="https://twitter.com/badhrikr22" target="_blank" class="sharebutton_links" aria-label="Twitter"><img src="./images/icon-twitter.svg" alt="" class="sharebutton__icons"></a>
+            <a href="https://in.pinterest.com/" target="_blank" class="sharebutton_links" aria-label="Pinterest"><img src="./images/icon-pinterest.svg" alt="" class="sharebutton__icons"></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -47,14 +51,15 @@
   </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
     $('.card__button').on('click', () =>{
       $('.card__sharebutton--active').toggle();
     })
   })
-</script>
+</script> -->
+<script src="./js/index.js"></script>
 </body>
 </html>
 
