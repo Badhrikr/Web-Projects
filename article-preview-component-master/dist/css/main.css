@@ -167,6 +167,7 @@ main {
   border: none;
   -webkit-transition: background-color 450ms ease-in;
   transition: background-color 450ms ease-in;
+  position: relative;
   z-index: 9999;
 }
 
@@ -204,6 +205,7 @@ main {
 
 .card__sharebutton--active {
   display: none;
+  z-index: 0;
 }
 
 .card__sharebutton--active > *:hover {
@@ -233,6 +235,7 @@ main {
     -ms-grid-columns: 40% 60%;
         grid-template-columns: 40% 60%;
     width: 50.5%;
+    max-width: 1500px;
     overflow: visible;
   }
   .card__imgcontainer {

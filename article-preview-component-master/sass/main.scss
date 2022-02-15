@@ -127,6 +127,7 @@ main {
     border-radius: 50%;
     border: none;
     transition: background-color 450ms ease-in;
+    position: relative;
     z-index: 9999;
   }
 
@@ -157,6 +158,7 @@ main {
 
   &__sharebutton--active {
     display: none;
+    z-index: 0;
   }
 
   &__sharebutton--active > *:hover {
@@ -181,6 +183,7 @@ main {
     display: grid;
     grid-template-columns: 40% 60%;
     width: 50.5%;
+    max-width: 1500px;
     overflow: visible;
 
     &__imgcontainer {

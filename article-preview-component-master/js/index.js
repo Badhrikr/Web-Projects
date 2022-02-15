@@ -10,7 +10,6 @@ button.addEventListener('click', function(){
     else{
         socialmedia.style.display = "none" 
         return toggle = true
-
     }
 })
 
