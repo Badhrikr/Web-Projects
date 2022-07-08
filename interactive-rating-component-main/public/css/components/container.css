@@ -121,6 +121,7 @@ body {
   color: hsl(216deg, 12%, 54%);
   font-weight: 700;
   text-decoration: none;
+  text-align: center;
   background-color: hsl(213deg, 19%, 18%);
   border: none;
   border-radius: 50%;
