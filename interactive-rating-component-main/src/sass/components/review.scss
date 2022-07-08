@@ -1,0 +1,29 @@
+@import "../base/index";
+
+
+.ratings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+        width: 150px;
+        margin-bottom: 2em;
+    }
+
+    &__result{
+        margin-bottom: 2em;
+        padding: .5em 1em;
+        color: $clr-primary-400;
+        background-color: $clr-primary-300;
+        border-radius: 100vmax;
+    }
+
+    &__content{
+        margin-bottom: 0;
+    }
+
+    &__heading,&__description{
+        text-align: center;
+    }
+}

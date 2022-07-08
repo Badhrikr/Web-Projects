@@ -1,0 +1,89 @@
+@import "../base/index";
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $clr-bg;
+}
+
+.container{
+    width: 88%;
+    max-width: 350px;
+    padding: 2em;
+    background: linear-gradient(45deg,$clr-bg,$clr-primary-300);
+    border-radius: 1rem;
+}
+
+.star__img{
+    display: grid;
+    place-items: center;
+    width: 45px;
+    aspect-ratio: 1/1;
+    margin-bottom: 2em;
+    border-radius: 50%;
+    background-color: $clr-primary-300;
+}
+
+.card__content{
+    margin-bottom: 2em;
+}
+
+.card__heading{
+    color: $ff-clr-neutral;
+    font-size: 1.5rem;
+}
+
+.card__description{
+    color: $ff-clr-400;
+    font-size: .85rem;
+}
+
+.card__buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.card__btn{
+    display: grid;
+    place-items: center;
+    width: 40px;
+    aspect-ratio: 1/1;
+    color: $ff-clr-400;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: $clr-primary-300;
+    border: none;
+    border-radius: 50%;
+    transition: all 450ms ease-in-out;
+}
+
+.card__btn:where(:hover,:focus){
+    cursor: pointer;
+    color: $ff-clr-neutral;
+    background-color: $clr-primary-400;
+}
+
+.subbtn{
+    width: 100%;
+    padding: 1em 2em;
+    color: $ff-clr-neutral;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: $clr-primary-400;
+    border: none;
+    border-radius: 100vmax;
+    transition: all 450ms ease-in-out;
+}
+
+.subbtn:where(:hover,:focus){
+    cursor: pointer;
+    background-color: $ff-clr-neutral;
+    color: $clr-primary-400;
+}
