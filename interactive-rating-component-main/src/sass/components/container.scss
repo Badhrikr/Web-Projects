@@ -63,10 +63,16 @@ body{
     transition: all 450ms ease-in-out;
 }
 
-.card__btn:where(:hover,:focus){
+.card__btn:hover{
     cursor: pointer;
     color: $ff-clr-neutral;
     background-color: $clr-primary-400;
+}
+
+.card__btn:focus{
+    cursor: pointer;
+    color: $ff-clr-neutral;
+    background-color: $ff-clr-400;
 }
 
 .subbtn{
