@@ -1,6 +1,7 @@
 <script>
   import { afterUpdate } from "svelte";
 
+  import appImage from "./assets/images/logo.svg";
   import Bill from "./lib/Bill.svelte";
   import Person from "./lib/Person.svelte";
   import Result from "./lib/result.svelte";
@@ -36,7 +37,7 @@
   }
 </script>
 
-<img src="src\assets\images\logo.svg" alt="" />
+<img src={appImage} alt="" />
 <div class="container">
   <Bill bind:bill />
   <TipPercent
