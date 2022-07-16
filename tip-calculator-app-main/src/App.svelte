@@ -14,10 +14,10 @@
   let totalAmount = 0;
 
   afterUpdate(() => {
-    if (bill > 0 && percent > 0 && totalPerson > 0) {
+    if (bill > 0 && totalPerson > 0) {
       let tipVal = bill * percent;
-      tipAmount = tipVal / 2;
-      totalAmount = (bill + tipVal) / 2;
+      tipAmount = (tipVal / totalPerson).toFixed(2);
+      totalAmount = ((bill + tipVal) / totalPerson).toFixed(2);
     }
   });
 
