@@ -3,7 +3,7 @@
   import src from "../assets/images/pattern-divider-mobile.svg";
 
   let advice =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur quod commodi alias et itaque.";
+    "If you stare at something you dropped on the ground, eventually someone will pick it up for you.";
   let number = 0;
 
   window.onload = () => {
