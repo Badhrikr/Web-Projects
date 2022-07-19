@@ -93,11 +93,20 @@ select {
   font-size: 11px; 
   text-align: center;
   transform: translateY(5em);
-  color: aliceblue;
+  color: var(--ft-primary-300);
 }
 
 .attribution a { 
   color: var(--ft-primary-400); 
+}
+
+.attribution p{
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.attribution p span{
+  color: var(--ft-primary-400);
 }
 
 body{

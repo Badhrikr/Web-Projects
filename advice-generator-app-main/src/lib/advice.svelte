@@ -18,7 +18,7 @@
       .then((adviceData) => {
         const Adviceobj = adviceData.slip;
         advice = Adviceobj.advice;
-        number = Adviceobj.slip_id;
+        number = Adviceobj.id;
       })
       .catch((error) => {
         console.log(error);
