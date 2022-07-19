@@ -6,10 +6,6 @@
   export let validityMessage = "";
 
   let touched = false;
-
-  if (type === "submit") {
-    placeholder = null;
-  }
 </script>
 
 <input
@@ -52,23 +48,6 @@
 
   input:focus {
     outline: none;
-  }
-
-  input[type="submit"] {
-    color: #fff;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: var(--clr-primary-300);
-    border: none;
-    box-shadow: 0 4px 0 hsl(154, 59%, 41%);
-    transition: all 0.4s ease-in-out;
-    background-image: none;
-  }
-
-  input[type="submit"]:hover {
-    cursor: pointer;
-    transform: translateY(5px);
-    box-shadow: none;
   }
 
   .error-message {

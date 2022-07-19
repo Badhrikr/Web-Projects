@@ -1,15 +1,11 @@
 <script>
+  import Button from "../components/Button.svelte";
   import TextInput from "../components/TextInput.svelte";
 
-  let buttonValue = "Claim your free trial";
   let firstName = "";
-  let validFirstName = false;
   let lastName = "";
-  let validLastName = false;
   let email = "";
-  let validEmail = false;
   let password = "";
-  let validPassword = false;
   let formIsValid = false;
 
   function isEmpty(val) {
@@ -23,7 +19,9 @@
   }
 
   function isValidPassword(val) {
-    return new RegExp("/^[a-zA-Z0-9!@#$%^&*]{6,16}$/").test(val);
+    return new RegExp(
+      "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
+    ).test(val);
   }
 
   $: validFirstName = !isEmpty(firstName);
@@ -74,12 +72,12 @@
       placeholder="Password"
       value={password}
       valid={validPassword}
-      validityMessage="Password should contain atleast one number and one special character"
+      validityMessage="Your password must be at least 8 characters [1 lowercase, 1 uppercase, 1 numeric]"
       on:input={(event) => {
         password = event.target.value;
       }}
     />
-    <TextInput type="submit" value={buttonValue} />
+    <Button disabled={!formIsValid} />
 
     <p class="terms">
       By clicking the button, you are agreeing to our
