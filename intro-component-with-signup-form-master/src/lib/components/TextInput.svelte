@@ -6,6 +6,10 @@
   export let validityMessage = "";
 
   let touched = false;
+
+  if (type === "submit") {
+    placeholder = null;
+  }
 </script>
 
 <input
@@ -15,6 +19,7 @@
   {placeholder}
   {value}
   on:blur={() => (touched = true)}
+  on:input
 />
 {#if validityMessage && !valid && touched}
   <p class="error-message">{validityMessage}</p>
@@ -69,5 +74,15 @@
   .error-message {
     margin-bottom: 0.5em;
     color: var(--clr-bg);
+  }
+
+  @media (min-width: 50em) {
+    input {
+      padding-left: 2em;
+    }
+
+    input[type="submit"] {
+      padding: 1em;
+    }
   }
 </style>

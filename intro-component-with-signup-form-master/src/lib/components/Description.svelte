@@ -23,4 +23,16 @@
     margin-bottom: 1em;
     font-size: 1.5rem;
   }
+
+  @media (min-width: 50em) {
+    .container {
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+  }
 </style>

@@ -2,7 +2,6 @@
   import TextInput from "../components/TextInput.svelte";
 
   let buttonValue = "Claim your free trial";
-
   let firstName = "";
   let validFirstName = false;
   let lastName = "";
@@ -11,6 +10,7 @@
   let validEmail = false;
   let password = "";
   let validPassword = false;
+  let formIsValid = false;
 
   function isEmpty(val) {
     return val.trim().length === 0;
@@ -30,47 +30,62 @@
   $: validLastName = !isEmpty(lastName);
   $: validEmail = isValidEmail(email);
   $: validPassword = isValidPassword(password);
+  $: formIsValid =
+    validFirstName && validLastName && validEmail && validPassword;
 </script>
 
-<div class="plan">
-  <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
-</div>
+<div class="container">
+  <div class="plan">
+    <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+  </div>
+  <div class="form-control">
+    <TextInput
+      type="text"
+      placeholder="First Name"
+      value={firstName}
+      valid={validFirstName}
+      validityMessage="[Field Name] cannot be empty"
+      on:input={(event) => {
+        firstName = event.target.value;
+      }}
+    />
+    <TextInput
+      type="text"
+      placeholder="Last Name"
+      value={lastName}
+      valid={validLastName}
+      validityMessage="[Field Name] cannot be empty"
+      on:input={(event) => {
+        lastName = event.target.value;
+      }}
+    />
+    <TextInput
+      type="email"
+      placeholder="Email Address"
+      value={email}
+      valid={validEmail}
+      validityMessage="Looks like this is not an email"
+      on:input={(event) => {
+        email = event.target.value;
+      }}
+    />
+    <TextInput
+      type="password"
+      placeholder="Password"
+      value={password}
+      valid={validPassword}
+      validityMessage="Password should contain atleast one number and one special character"
+      on:input={(event) => {
+        password = event.target.value;
+      }}
+    />
+    <TextInput type="submit" value={buttonValue} />
 
-<div class="form-control">
-  <TextInput
-    type="text"
-    placeholder="First Name"
-    value={firstName}
-    valid={validFirstName}
-    validityMessage="[Field Name] cannot be empty"
-  />
-  <TextInput
-    type="text"
-    placeholder="Last Name"
-    value={lastName}
-    valid={validLastName}
-    validityMessage="[Field Name] cannot be empty"
-  />
-  <TextInput
-    type="email"
-    placeholder="Email Address"
-    value={email}
-    valid={validEmail}
-    validityMessage="Looks like this is not an email"
-  />
-  <TextInput
-    type="password"
-    placeholder="Password"
-    value={password}
-    valid={validPassword}
-    validityMessage="Please enter a valid input"
-  />
-  <TextInput type="submit" value={buttonValue} />
-
-  <p>
-    By clicking the button, you are agreeing to our
-    <span>Terms and Services</span>
-  </p>
+    <p class="terms">
+      By clicking the button, you are agreeing to our
+      <span>Terms and Services</span>
+    </p>
+  </div>
 </div>
 
 <style>
@@ -117,5 +132,20 @@
 
   p span:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: 50em) {
+    .plan {
+      margin-bottom: 1.8em;
+    }
+
+    .form-control {
+      padding: 2.4em;
+    }
+
+    .terms {
+      margin-top: 1em;
+      font-size: 0.7rem;
+    }
   }
 </style>

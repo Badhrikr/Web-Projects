@@ -113,8 +113,19 @@ body{
   width: 87.3%;
 }
 
-/* @media (min-width: 50em) {
+@media (min-width: 50em) {
   body{
     background-image: url(../assets/images/bg-intro-desktop.png);
   }
-} */
+
+  #app{
+    display: flex;
+    gap: 1.5em;
+    width: 80%;
+    margin-top: 3em;
+  }
+
+  #app > *{
+    width: 100%;
+  }
+}
