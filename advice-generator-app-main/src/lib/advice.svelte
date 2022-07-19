@@ -3,8 +3,8 @@
   import src from "../assets/images/pattern-divider-mobile.svg";
 
   let advice =
-    "If you stare at something you dropped on the ground, eventually someone will pick it up for you.";
-  let number = 0;
+    "If you stare at something you dropped on the ground, eventually someone will pick it up for you";
+  let number = "0";
 
   window.onload = () => {
     getAdvice();
