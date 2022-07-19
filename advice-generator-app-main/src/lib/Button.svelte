@@ -1,5 +1,5 @@
 <script>
-  let src = "src/assets/images/icon-dice.svg";
+  import src from "../assets/images/icon-dice.svg";
 </script>
 
 <button on:click><img {src} alt="A Dice Logo" /></button>

@@ -1,7 +1,7 @@
 <script>
   import Button from "./Button.svelte";
+  import src from "../assets/images/pattern-divider-mobile.svg";
 
-  let src = "src/assets/images/pattern-divider-mobile.svg";
   let advice =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur quod commodi alias et itaque.";
   let number = 0;
