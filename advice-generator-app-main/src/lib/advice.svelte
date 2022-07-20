@@ -30,7 +30,7 @@
 <div class="container">
   <h1 class="title">Advice #{number}</h1>
   <p class="advice-quotes">
-    &quot;{advice}&quot;
+    <q>{advice}</q>
   </p>
   <picture>
     <source media="(min-width: 50em)" srcset={picturesrc} />
