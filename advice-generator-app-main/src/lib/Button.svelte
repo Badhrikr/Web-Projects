@@ -14,5 +14,14 @@
     border-radius: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover {
+    box-shadow: 0 0 15px 5px var(--ft-primary-400);
+  }
+
+  button img {
+    pointer-events: none;
   }
 </style>
