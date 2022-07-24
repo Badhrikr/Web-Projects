@@ -125,6 +125,7 @@ body{
   background-color: var(--clr-bg-body);
   background-image: url(../assets/images/bg-mobile-dark.jpg);
   background-repeat: no-repeat;
+  background-size: 100%;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.175rem;
 }
