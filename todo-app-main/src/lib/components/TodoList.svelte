@@ -2,6 +2,7 @@
   import TextInput from "../UI/TextInput.svelte";
   import TodoListItems from "./TodoListItems.svelte";
 
+  let value = "";
   let todoText = "";
   let todos = [
     {
@@ -30,6 +31,10 @@
     },
   ];
 
+  function getText(event) {
+    todoText = event.target.value;
+  }
+
   function addItem() {
     todos = [
       ...todos,
@@ -38,6 +43,7 @@
         text: todoText,
       },
     ];
+    value = null;
   }
 
   function clear() {
@@ -46,10 +52,12 @@
 </script>
 
 <div class="container">
-  <TextInput type="checkbox" />
+  <TextInput type="checkbox" value="" />
   <TextInput
     type="text"
-    on:input={(event) => (todoText = event.target.value)}
+    {value}
+    on:input={getText}
+    on:focus={() => (value = "")}
   />
   <button on:click={addItem}>Go</button>
 </div>

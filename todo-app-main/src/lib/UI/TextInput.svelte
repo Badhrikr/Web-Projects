@@ -1,8 +1,9 @@
 <script>
   export let type;
+  export let value;
 </script>
 
-<input {type} placeholder="Create a new todo..." on:input />
+<input {type} {value} placeholder="Create a new todo..." on:input on:focus />
 
 <style>
   input[type="text"] {
