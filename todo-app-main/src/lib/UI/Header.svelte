@@ -1,10 +1,18 @@
 <script>
-  import src from "../../assets/images/icon-sun.svg";
+  let src = "src/assets/images/icon-sun.svg";
+
+  function themeSwitch() {
+    if (src === "src/assets/images/icon-sun.svg") {
+      src = "src/assets/images/icon-moon.svg";
+    } else {
+      src = "src/assets/images/icon-sun.svg";
+    }
+  }
 </script>
 
 <header>
   <h1>Todo</h1>
-  <img {src} alt="A sun logo" />
+  <img {src} alt="A sun logo" on:click={themeSwitch} />
 </header>
 
 <style>
