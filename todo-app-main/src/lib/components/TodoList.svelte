@@ -30,28 +30,39 @@
       text: "Complete Todo App on Frontend Mentor",
     },
   ];
+  let todoTextValid = true;
+  let noOfItems = todos.length;
 
   function getText(event) {
     todoText = event.target.value;
   }
 
   function addItem() {
-    todos = [
-      ...todos,
-      {
-        id: Math.random(),
-        text: todoText,
-      },
-    ];
-    value = null;
+    if (todoText.trim().length === 0) {
+      todoTextValid = false;
+    } else {
+      todoTextValid = true;
+      todos = [
+        ...todos,
+        {
+          id: Math.random(),
+          text: todoText,
+        },
+      ];
+      localStorage.setItem("todos", JSON.stringify(todos));
+      value = null;
+      todoText = "";
+      noOfItems = todos.length;
+    }
   }
 
   function clear() {
     todos = [];
+    localStorage.clear();
   }
 </script>
 
-<div class="container">
+<div class="container" class:invalid={!todoTextValid}>
   <TextInput type="checkbox" value="" />
   <TextInput
     type="text"
@@ -62,6 +73,10 @@
   <button on:click={addItem}>Go</button>
 </div>
 
+{#if !todoTextValid}
+  <p class:invalid={!todoTextValid}>Input can't be empty</p>
+{/if}
+
 <div class="wrapper">
   {#each todos as todo, i}
     <TodoListItems todoText={todo.text} />
@@ -69,7 +84,7 @@
 
   {#if todos.length > 0}
     <div class="listinfo">
-      <p class="items-count">5 items left</p>
+      <p class="items-count">{noOfItems} items left</p>
       <button on:click={clear}>Clear Completed</button>
     </div>
   {/if}
@@ -106,5 +121,10 @@
     color: var(--ft-clr-300);
     font-size: 0.8rem;
     background-color: var(--clr-bg-container);
+  }
+
+  .invalid {
+    margin-bottom: 0.5em;
+    color: #f87272;
   }
 </style>

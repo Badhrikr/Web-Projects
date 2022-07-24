@@ -7,7 +7,7 @@
 
 <div class="container">
   <div class="listitems">
-    <TextInput type="checkbox" />
+    <TextInput type="checkbox" value="" />
     <p class="checklist">{todoText}</p>
   </div>
   <img {src} alt="A button to remove Items" />
@@ -41,5 +41,6 @@
     width: 13px;
     aspect-ratio: 1/1;
     margin-right: 1.5em;
+    cursor: pointer;
   }
 </style>

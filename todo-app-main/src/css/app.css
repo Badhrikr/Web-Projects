@@ -115,8 +115,14 @@ select {
   }
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
 
 body{
   display: flex;
@@ -136,4 +142,12 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+@media (min-width: 50em) {
+  body{
+    background-image: url(../assets/images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
