@@ -37,6 +37,7 @@
     let myObj = localStorage.getItem("todos");
     if (myObj != null) {
       todos = [...JSON.parse(myObj)];
+      noOfItems = todos.length;
     } else {
       todos = [];
     }
