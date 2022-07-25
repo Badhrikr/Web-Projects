@@ -1,18 +1,27 @@
 <script>
-  let src = "src/assets/images/icon-sun.svg";
+  import srcSun from "../../assets/images/icon-sun.svg";
+  import srcMoon from "../../assets/images/icon-moon.svg";
 
-  function themeSwitch() {
-    if (src === "src/assets/images/icon-sun.svg") {
-      src = "src/assets/images/icon-moon.svg";
+  let switched = false;
+
+  function themeswitch() {
+    if (switched === false) {
+      switched = true;
     } else {
-      src = "src/assets/images/icon-sun.svg";
+      switched = false;
     }
   }
 </script>
 
 <header>
   <h1>Todo</h1>
-  <img {src} alt="A sun logo" on:click={themeSwitch} />
+  <button on:click={themeswitch}>
+    {#if switched === false}
+      <img src={srcSun} alt="A sun logo" />
+    {:else}
+      <img src={srcMoon} alt="A sun logo" />
+    {/if}
+  </button>
 </header>
 
 <style>
@@ -31,9 +40,15 @@
     letter-spacing: 10px;
   }
 
+  button {
+    all: unset;
+    cursor: pointer;
+  }
+
   img {
     width: 20px;
     aspect-ratio: 1/1;
-    cursor: pointer;
+
+    pointer-events: none;
   }
 </style>
