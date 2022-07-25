@@ -11,6 +11,12 @@
   --ft-clr-400: hsl(234, 11%, 52%);
   --ft-clr-300: hsl(233, 14%, 35%);
   --ft-clr-200:hsl(237, 14%, 26%);
+
+  --ft-clr-500-light: hsl(0, 0%, 98%);
+  --ft-clr-400-light: hsl(236, 33%, 92%);
+  --ft-clr-300-light: hsl(233, 11%, 84%);
+  --ft-clr-200-light: hsl(236, 9%, 61%);
+  --ft-clr-100-light: hsl(235, 19%, 35%);
 }
 
 /* ### Primary
@@ -144,10 +150,20 @@ body{
   width: 100%;
 }
 
+.light{
+  background-color: var(--ft-clr-500-light);
+  background-image: url(../assets/images/bg-mobile-light.jpg);
+}
+
 @media (min-width: 50em) {
   body{
     background-image: url(../assets/images/bg-desktop-dark.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+  }
+
+  .light{
+    background-color: var(--ft-clr-500-light);
+    background-image: url(../assets/images/bg-desktop-light.jpg);
   }
 }

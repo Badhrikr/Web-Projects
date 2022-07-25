@@ -2,13 +2,15 @@
   import srcSun from "../../assets/images/icon-sun.svg";
   import srcMoon from "../../assets/images/icon-moon.svg";
 
-  let switched = false;
+  export let switched = false;
 
   function themeswitch() {
     if (switched === false) {
       switched = true;
+      document.querySelector("body").classList.add("light");
     } else {
       switched = false;
+      document.querySelector("body").classList.remove("light");
     }
   }
 </script>
