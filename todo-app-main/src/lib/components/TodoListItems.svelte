@@ -1,13 +1,14 @@
 <script>
   import TextInput from "../UI/TextInput.svelte";
   import src from "../../assets/images/icon-cross.svg";
+  import CustomCheckbox from "../UI/CustomCheckbox.svelte";
 
   export let todoText;
 </script>
 
 <div class="container">
   <div class="listitems">
-    <TextInput type="checkbox" value="" />
+    <CustomCheckbox />
     <p class="checklist">{todoText}</p>
   </div>
   <img {src} alt="A button to remove Items" />

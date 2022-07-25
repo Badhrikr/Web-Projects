@@ -1,4 +1,6 @@
 <script>
+  import CustomCheckbox from "../UI/CustomCheckbox.svelte";
+
   import TextInput from "../UI/TextInput.svelte";
   import TodoListItems from "./TodoListItems.svelte";
 
@@ -73,7 +75,7 @@
 </script>
 
 <div class="container" class:invalid={!todoTextValid}>
-  <TextInput type="checkbox" value="" />
+  <CustomCheckbox />
   <TextInput
     type="text"
     {value}
@@ -101,21 +103,22 @@
 </div>
 
 <style>
-  .container {
-    display: flex;
-    justify-content: start;
-    background-color: var(--clr-bg-container);
-    width: 100%;
-    margin-bottom: 1em;
-    padding: 0.65em 1em;
-    border-radius: 5px;
-  }
-
   button {
     color: inherit;
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    place-items: center;
+    background-color: var(--clr-bg-container);
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.65em 1em;
+    border-radius: 5px;
   }
 
   .wrapper {
