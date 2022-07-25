@@ -1,7 +1,6 @@
 <script>
   import { afterUpdate } from "svelte";
 
-  import appImage from "./assets/images/logo.svg";
   import Bill from "./lib/Bill.svelte";
   import Person from "./lib/Person.svelte";
   import Result from "./lib/result.svelte";
@@ -11,8 +10,8 @@
   let value;
   let bill = 0;
   let totalPerson = 0;
-  let tipAmount = 0;
-  let totalAmount = 0;
+  let tipAmount = (0).toFixed(2);
+  let totalAmount = (0).toFixed(2);
 
   afterUpdate(() => {
     if (bill > 0 && totalPerson > 0) {
@@ -25,10 +24,10 @@
   function resetAll() {
     bill = 0;
     totalPerson = 0;
-    percent = 0;
+    percent = null;
     value = percent;
-    tipAmount = 0;
-    totalAmount = 0;
+    tipAmount = (0).toFixed(2);
+    totalAmount = (0).toFixed(2);
   }
 
   function getCustomPercent(event) {
@@ -37,7 +36,7 @@
   }
 </script>
 
-<img src={appImage} alt="" />
+<img src="src\assets\images\logo.svg" alt="" />
 <div class="container">
   <Bill bind:bill />
   <TipPercent

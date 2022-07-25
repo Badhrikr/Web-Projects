@@ -120,6 +120,7 @@ body{
 @media (min-width: 50em) {
 #app{
   margin: 0;
+  width: 80%;
 }
 
   .container{

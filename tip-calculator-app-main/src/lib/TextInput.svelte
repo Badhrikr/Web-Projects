@@ -1,15 +1,12 @@
 <script>
-  export let inputPlaceholder;
   export let inputName;
   export let value;
 </script>
 
 <h1>{inputName}</h1>
 <label class="input__holder" class:margin-none={value == 0} for="input-val">
-  <div class="image-wrapper">
-    <img src={inputPlaceholder} alt="" />
-  </div>
   <input
+    class={$$props.class}
     type="number"
     id="input-val"
     on:focus={() => (value = "")}
@@ -49,20 +46,15 @@
 
   input {
     width: 100%;
-    background-color: transparent;
-    border: none;
     color: var(--clr-primary-400);
     text-align: right;
+    background-color: transparent;
+    border: none;
     caret-color: var(--clr-primary-400);
   }
 
   input:focus {
     outline: none;
-  }
-
-  .image-wrapper {
-    width: 15px;
-    height: 15px;
   }
 
   .info {
@@ -80,5 +72,16 @@
   /* Firefox */
   input[type="number"] {
     -moz-appearance: textfield;
+  }
+
+  .bill,
+  .person {
+    background-image: url(../assets/images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+
+  .person {
+    background-image: url(../assets/images/icon-person.svg);
   }
 </style>
