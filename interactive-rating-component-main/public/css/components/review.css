@@ -88,3 +88,7 @@ select {
 .ratings__heading, .ratings__description {
   text-align: center;
 }
+
+.ratings {
+  display: none;
+}
