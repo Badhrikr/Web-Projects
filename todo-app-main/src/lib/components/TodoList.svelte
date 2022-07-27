@@ -1,12 +1,9 @@
 <script>
   import CustomCheckbox from "../UI/CustomCheckbox.svelte";
-
   import TextInput from "../UI/TextInput.svelte";
   import TodoListItems from "./TodoListItems.svelte";
 
-  let value = "";
-  let todoText = "";
-  let todos = [
+  export let todos = [
     {
       id: Math.random(),
       text: "Complete online JavaScript course",
@@ -32,24 +29,28 @@
       text: "Complete Todo App on Frontend Mentor",
     },
   ];
+  export let todoDone = false;
+  let value = "";
+  let todoText = "";
   let todoTextValid = true;
   let noOfItems = todos.length;
+  let checkList = [];
 
-  window.onload = function () {
-    let myObj = localStorage.getItem("todos");
-    if (myObj != null) {
-      todos = [...JSON.parse(myObj)];
-      noOfItems = todos.length;
-    } else {
-      todos = [];
-    }
-  };
+  // window.onload = function () {
+  //   let myObj = localStorage.getItem("todos");
+  //   if (myObj != null) {
+  //     todos = [...JSON.parse(myObj)];
+  //     noOfItems = todos.length;
+  //   } else {
+  //     todos = [];
+  //   }
+  // };
 
   function getText(event) {
     todoText = event.target.value;
   }
 
-  function addItem() {
+  function addTodo() {
     if (todoText.trim().length === 0) {
       todoTextValid = false;
     } else {
@@ -61,28 +62,45 @@
           text: todoText,
         },
       ];
-      localStorage.setItem("todos", JSON.stringify(todos));
+      // localStorage.setItem("todos", JSON.stringify(todos));
       value = null;
       todoText = "";
       noOfItems = todos.length;
     }
   }
 
+  function removeTodo(index) {
+    todos.splice(index, 1);
+    todos = todos;
+    // localStorage.setItem("todos", JSON.stringify(todos));
+    noOfItems = todos.length;
+  }
+
   function clear() {
     todos = [];
-    localStorage.clear();
+    // localStorage.clear();
   }
+
+  function checkedItems() {
+    if (todoDone) {
+      todoDone = false;
+    } else {
+      todoDone = true;
+    }
+  }
+
+  $: console.log(todoDone);
 </script>
 
 <div class="container" class:invalid={!todoTextValid}>
-  <CustomCheckbox />
+  <CustomCheckbox {checkedItems} />
   <TextInput
     type="text"
     {value}
     on:input={getText}
     on:focus={() => (value = "")}
   />
-  <button on:click={addItem}>Go</button>
+  <button on:click={addTodo}>Go</button>
 </div>
 
 {#if !todoTextValid}
@@ -91,7 +109,7 @@
 
 <div class="wrapper">
   {#each todos as todo, i}
-    <TodoListItems todoText={todo.text} />
+    <TodoListItems todoText={todo.text} on:click={() => removeTodo(i)} />
   {/each}
 
   {#if todos.length > 0}

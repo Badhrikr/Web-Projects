@@ -1,12 +1,15 @@
 <script>
+  export let checkedItems;
   let checked = false;
 
-  function check() {
+  export function check() {
     if (checked === false) {
       checked = true;
     } else {
       checked = false;
     }
+
+    checkedItems();
   }
 </script>
 

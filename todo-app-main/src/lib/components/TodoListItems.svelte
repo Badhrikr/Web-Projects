@@ -1,22 +1,37 @@
 <script>
-  import TextInput from "../UI/TextInput.svelte";
   import src from "../../assets/images/icon-cross.svg";
   import CustomCheckbox from "../UI/CustomCheckbox.svelte";
+  import todos from "../components/TodoList.svelte";
 
   export let todoText;
+
+  let checkList = todos;
+  let todoDone = false;
+
+  function checkedItems() {
+    if (todoDone) {
+      todoDone = false;
+    } else {
+      todoDone = true;
+    }
+  }
 </script>
 
 <div class="container">
   <div class="listitems">
-    <CustomCheckbox />
-    <p class="checklist">{todoText}</p>
+    <CustomCheckbox {checkedItems} />
+    <p class="checklist" class:done={todoDone}>{todoText}</p>
   </div>
-  <img {src} alt="A button to remove Items" />
+  <img {src} alt="A button to remove Items" on:click />
 </div>
 
 <style>
   .checklist {
     padding-left: 1em;
+  }
+
+  .done {
+    text-decoration: line-through;
   }
 
   .container {
