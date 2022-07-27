@@ -169,6 +169,10 @@ body {
   background: none;
   border: none;
   padding: 0;
+  transform: rotateZ(0deg);
+}
+.card__arrowbtn-modifier {
+  transform: rotateZ(180deg);
 }
 .card__arrow {
   display: inline;
