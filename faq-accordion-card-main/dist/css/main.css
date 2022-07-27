@@ -1,0 +1,232 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@-webkit-keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(338deg, 41%, 95%);
+}
+
+picture, picture img, picture source {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  font-size: 0.8rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 85.55%;
+  max-width: 920px;
+  padding: 7em 1.5em 2.5em;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+.card__image {
+  position: absolute;
+  top: -25%;
+  left: 12.5%;
+  padding-bottom: 5rem;
+  width: 75%;
+  background-image: url(../../images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom 3rem;
+  -webkit-animation: float 4s infinite;
+          animation: float 4s infinite;
+}
+.card__src__boximg {
+  display: none;
+}
+.card__content {
+  width: 100%;
+  text-align: center;
+}
+.card__title {
+  color: hsl(238deg, 29%, 16%);
+  margin-bottom: 0.8em;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.card__description {
+  margin-bottom: 1em;
+  color: hsl(237deg, 12%, 33%);
+  text-align: left;
+  border-bottom: 1px solid hsl(240deg, 5%, 91%);
+}
+.card__arrowbtn {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.card__arrow {
+  display: inline;
+}
+.card__arrow:hover {
+  cursor: pointer;
+}
+.card__question {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+.card__question-fw {
+  font-weight: 700;
+}
+.card__answer {
+  display: none;
+  margin-bottom: 1em;
+  color: hsl(240deg, 6%, 50%);
+}
+.card__showanswer {
+  display: block;
+}
+
+@media (min-width: 775px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .card__content {
+    padding-top: 4.5em;
+    padding-right: 8.5em;
+    align-self: flex-start;
+  }
+  .card__title {
+    margin-bottom: 1em;
+    text-align: left;
+  }
+  .card__picture-wrapper {
+    overflow: hidden;
+  }
+  .card__image {
+    position: relative;
+    top: 3em;
+    left: -4rem;
+    width: 90em;
+    height: auto;
+    background-image: url(../../images/bg-pattern-desktop.svg);
+  }
+  .card__src__boximg {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 5px;
+    width: 200px;
+    transform: translateX(-50%);
+    z-index: 99;
+  }
+}/*# sourceMappingURL=main.css.map */
