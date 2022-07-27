@@ -7,6 +7,15 @@ $bg--clr: hsl(229, 57%, 11%);
 
 $ft--clr: hsl(229, 7%, 55%);
 
+  @keyframes slider {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: translateX(1);
+    }
+  }
+
 *,
 *::before,
 *::after {
@@ -97,53 +106,36 @@ body {
   }
 
   &__progresslevel {
-    width: 100%;
-    height: 1em;
-    background-color: $bg--clr;
-    border-radius: 1rem;
+    --height: 1em;
+
     position: relative;
+    width: 100%;
+    height: var(--height);
+    background-color: $bg--clr;
+    border-radius: 100vmax;
     overflow: hidden;
   }
 
-  &__progresslevel::before {
-    content: "";
-    position: absolute;
-    right: 25%;
-    width: 100%;
+  &__progresslevel-fill{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 75%;
     height: 100%;
     background: linear-gradient(to right, $Gradient_from, $Gradient_to);
     border: 2px solid $bg--clr;
-    border-radius: 1rem;
+    border-radius: 100vmax;
+    transform-origin: left;
     animation: slider 450ms forwards;
+
   }
 
-  @keyframes slider {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  &__progresslevel::after {
-    content: "";
-    width: 4.5%;
+  &__progresslevel-dot{
+    width: calc(var(--height)/2);
     aspect-ratio: 1/1;
-    margin: 1.8px 2px 0;
-    background-color: #fff;
+    margin-right: 1.5px;
+    background-color: #ffffff;
     border-radius: 50%;
-    position: absolute;
-    animation: slider_dot 450ms forwards;
-  }
-
-  @keyframes slider_dot {
-    from {
-      right: 100%;
-    }
-    to {
-      right: 25%;
-    }
   }
 
   &__progressdata {
@@ -229,15 +221,9 @@ footer {
       margin-bottom: 0.5em;
     }
 
-    &__progresslevel::before {
-      border: 3px solid $bg--clr;
-    }
-
-    &__progresslevel::after {
-      content: "";
-      width: 3.2%;
-      aspect-ratio: 1/1;
-      margin: 3px 2px 0;
+    &__progresslevel-dot{
+      width: var(--height);
+      margin-right: 2px;
     }
 
     &__datadetails {
