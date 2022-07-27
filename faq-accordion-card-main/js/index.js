@@ -1,6 +1,7 @@
 const arrowBtns = document.querySelectorAll(".card__arrowbtn")
 const questions = document.querySelectorAll(".card__question")
 const messages = document.querySelectorAll(".card__answer")
+let clicked = false;
 
 messages[1].classList.add('card__revealed__answer')
 questions[1].classList.add('card__question-fw-modifier')
@@ -11,6 +12,13 @@ arrowBtns.forEach((arrowBtn,i) =>{
         questions[1].classList.remove('card__question-fw-modifier')
         messages[i].classList.toggle('card__showanswer')
         questions[i].classList.toggle('card__question-fw')
+        if(clicked){
+            arrowBtn.style.transform = 'rotateZ(0deg)'
+            return clicked = false
+        }else{
+            arrowBtn.style.transform = 'rotateZ(180deg)'
+            return clicked = true
+        }
     })
 })
 
