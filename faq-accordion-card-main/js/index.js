@@ -2,13 +2,15 @@ const arrowBtns = document.querySelectorAll(".card__arrowbtn")
 const questions = document.querySelectorAll(".card__question")
 const messages = document.querySelectorAll(".card__answer")
 
-arrowBtns.forEach(arrowBtn =>{
+messages[1].classList.add('card__revealed__answer')
+questions[1].classList.add('card__question-fw-modifier')
+
+arrowBtns.forEach((arrowBtn,i) =>{
     arrowBtn.addEventListener('click',()=>{
-        messages.forEach(message =>{
-            message.classList.toggle('card__showanswer')
-        })
-        questions.forEach(question => {
-            question.classList.toggle('card__question-fw')
-        })
+        messages[1].classList.remove('card__revealed__answer')
+        questions[1].classList.remove('card__question-fw-modifier')
+        messages[i].classList.toggle('card__showanswer')
+        questions[i].classList.toggle('card__question-fw')
     })
 })
+

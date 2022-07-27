@@ -148,8 +148,10 @@ body {
   display: none;
 }
 .card__content {
+  position: relative;
   width: 100%;
   text-align: center;
+  z-index: 999;
 }
 .card__title {
   color: hsl(238deg, 29%, 16%);
@@ -183,12 +185,18 @@ body {
 .card__question-fw {
   font-weight: 700;
 }
+.card__question-fw-modifier {
+  font-weight: 700;
+}
 .card__answer {
   display: none;
   margin-bottom: 1em;
   color: hsl(240deg, 6%, 50%);
 }
 .card__showanswer {
+  display: block;
+}
+.card__revealed__answer {
   display: block;
 }
 
@@ -199,26 +207,31 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0;
+    background-image: url(../../images/bg-pattern-desktop.svg);
+    background-size: 95%;
+    background-position: bottom 28% left -465px;
+    background-repeat: no-repeat;
   }
   .card__content {
     padding-top: 4.5em;
     padding-right: 8.5em;
+    padding-bottom: 5.5em;
     align-self: flex-start;
   }
   .card__title {
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
     text-align: left;
   }
   .card__picture-wrapper {
     overflow: hidden;
+    align-self: flex-start;
   }
   .card__image {
     position: relative;
     top: 3em;
     left: -4rem;
     width: 90em;
-    height: auto;
-    background-image: url(../../images/bg-pattern-desktop.svg);
+    background-image: none;
   }
   .card__src__boximg {
     display: block;
