@@ -1,25 +1,17 @@
 <script>
   import src from "../../assets/images/icon-cross.svg";
   import CustomCheckbox from "../UI/CustomCheckbox.svelte";
-  import todos from "../components/TodoList.svelte";
 
   export let todoText;
-
-  let checkList = todos;
-  let todoDone = false;
-
-  function checkedItems() {
-    if (todoDone) {
-      todoDone = false;
-    } else {
-      todoDone = true;
-    }
-  }
+  export let todoDone = false;
 </script>
 
 <div class="container">
   <div class="listitems">
-    <CustomCheckbox {checkedItems} />
+    <CustomCheckbox
+      checked={todoDone}
+      on:click={() => (todoDone ? (todoDone = false) : (todoDone = true))}
+    />
     <p class="checklist" class:done={todoDone}>{todoText}</p>
   </div>
   <img {src} alt="A button to remove Items" on:click />

@@ -1,19 +1,8 @@
 <script>
-  export let checkedItems;
-  let checked = false;
-
-  export function check() {
-    if (checked === false) {
-      checked = true;
-    } else {
-      checked = false;
-    }
-
-    checkedItems();
-  }
+  export let checked = false;
 </script>
 
-<button on:click={check} class:checked />
+<button class:checked on:click />
 
 <style>
   button {

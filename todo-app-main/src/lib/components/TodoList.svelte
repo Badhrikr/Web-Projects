@@ -3,7 +3,7 @@
   import TextInput from "../UI/TextInput.svelte";
   import TodoListItems from "./TodoListItems.svelte";
 
-  export let todos = [
+  let todos = [
     {
       id: Math.random(),
       text: "Complete online JavaScript course",
@@ -29,18 +29,18 @@
       text: "Complete Todo App on Frontend Mentor",
     },
   ];
-  export let todoDone = false;
   let value = "";
   let todoText = "";
   let todoTextValid = true;
-  let noOfItems = todos.length;
-  let checkList = [];
+  let noOfItems = 0;
+  let checkedAll = false;
+
+  $: noOfItems = todos.length;
 
   // window.onload = function () {
   //   let myObj = localStorage.getItem("todos");
   //   if (myObj != null) {
   //     todos = [...JSON.parse(myObj)];
-  //     noOfItems = todos.length;
   //   } else {
   //     todos = [];
   //   }
@@ -65,7 +65,6 @@
       // localStorage.setItem("todos", JSON.stringify(todos));
       value = null;
       todoText = "";
-      noOfItems = todos.length;
     }
   }
 
@@ -73,7 +72,6 @@
     todos.splice(index, 1);
     todos = todos;
     // localStorage.setItem("todos", JSON.stringify(todos));
-    noOfItems = todos.length;
   }
 
   function clear() {
@@ -81,19 +79,13 @@
     // localStorage.clear();
   }
 
-  function checkedItems() {
-    if (todoDone) {
-      todoDone = false;
-    } else {
-      todoDone = true;
-    }
+  function selectAll() {
+    checkedAll ? (checkedAll = false) : (checkedAll = true);
   }
-
-  $: console.log(todoDone);
 </script>
 
 <div class="container" class:invalid={!todoTextValid}>
-  <CustomCheckbox {checkedItems} />
+  <CustomCheckbox checked={checkedAll} on:click={selectAll} />
   <TextInput
     type="text"
     {value}
@@ -109,7 +101,11 @@
 
 <div class="wrapper">
   {#each todos as todo, i}
-    <TodoListItems todoText={todo.text} on:click={() => removeTodo(i)} />
+    <TodoListItems
+      todoText={todo.text}
+      on:click={() => removeTodo(i)}
+      todoDone={checkedAll}
+    />
   {/each}
 
   {#if todos.length > 0}
