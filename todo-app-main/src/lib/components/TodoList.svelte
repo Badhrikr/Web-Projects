@@ -7,35 +7,47 @@
     {
       id: Math.random(),
       text: "Complete online JavaScript course",
+      state: false,
     },
     {
       id: Math.random(),
       text: "Jog around the park 3x",
+      state: false,
     },
     {
       id: Math.random(),
       text: "10 minutes meditation",
+      state: false,
     },
     {
       id: Math.random(),
       text: "Read for 1 hour",
+      state: false,
     },
     {
       id: Math.random(),
       text: "Pick up groceries",
+      state: false,
     },
     {
       id: Math.random(),
       text: "Complete Todo App on Frontend Mentor",
+      state: false,
     },
   ];
+  let completedtodo = [];
+  let incompletedtodo = [];
   let value = "";
   let todoText = "";
   let todoTextValid = true;
   let noOfItems = 0;
   let checkedAll = false;
 
-  $: noOfItems = todos.length;
+  $: incompletedtodo = todos.filter((todo) => {
+    return !completedtodo.includes(todo);
+  });
+  $: noOfItems = Math.abs(todos.length - completedtodo.length);
+  // $: localStorage.setItem("todos", JSON.stringify(todos));
 
   // window.onload = function () {
   //   let myObj = localStorage.getItem("todos");
@@ -60,9 +72,9 @@
         {
           id: Math.random(),
           text: todoText,
+          state: false,
         },
       ];
-      // localStorage.setItem("todos", JSON.stringify(todos));
       value = null;
       todoText = "";
     }
@@ -71,17 +83,45 @@
   function removeTodo(index) {
     todos.splice(index, 1);
     todos = todos;
-    // localStorage.setItem("todos", JSON.stringify(todos));
   }
 
   function clear() {
-    todos = [];
-    // localStorage.clear();
+    todos = todos.filter((items) => {
+      return !completedtodo.includes(items);
+    });
+    checkedAll = false;
   }
 
   function selectAll() {
-    checkedAll ? (checkedAll = false) : (checkedAll = true);
+    if (checkedAll) {
+      checkedAll = false;
+      completedtodo = [];
+    } else {
+      checkedAll = true;
+      completedtodo = todos;
+    }
   }
+
+  function completedItems(index) {
+    if (completedtodo.includes(todos[index])) {
+      completedtodo = completedtodo;
+    } else {
+      completedtodo = [...completedtodo, todos[index]];
+      todos[index].state = true;
+    }
+  }
+
+  function popCompletedItems(index) {
+    if (completedtodo.includes(todos[index])) {
+      let completedtodoIndex = completedtodo.indexOf(todos[index]);
+      completedtodo.splice(completedtodoIndex, 1);
+      completedtodo = [...completedtodo];
+      todos[index].state = false;
+    }
+  }
+
+  $: console.log(completedtodo);
+  $: console.log(incompletedtodo);
 </script>
 
 <div class="container" class:invalid={!todoTextValid}>
@@ -104,7 +144,9 @@
     <TodoListItems
       todoText={todo.text}
       on:click={() => removeTodo(i)}
-      todoDone={checkedAll}
+      todoDone={todo.state}
+      completedItems={() => completedItems(i)}
+      popCompletedItems={() => popCompletedItems(i)}
     />
   {/each}
 
@@ -112,6 +154,11 @@
     <div class="listinfo">
       <p class="items-count">{noOfItems} items left</p>
       <button on:click={clear}>Clear Completed</button>
+    </div>
+    <div class="listinfo control-center">
+      <button class="all">All</button>
+      <button class="active">Active</button>
+      <button class="completed">Completed</button>
     </div>
   {/if}
 </div>
@@ -148,6 +195,19 @@
     color: var(--ft-clr-300);
     font-size: 0.8rem;
     background-color: var(--clr-bg-container);
+  }
+
+  .control-center {
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2em;
+    font-weight: 700;
+    border-radius: 5px;
+  }
+
+  .control-center > button:where(:hover, :focus) {
+    color: var(--clr-primary-400);
+    cursor: pointer;
   }
 
   .invalid {
