@@ -43,10 +43,12 @@
   let noOfItems = 0;
   let checkedAll = false;
 
+  // $: noOfItems = Math.abs(todos.length - completedtodo.length);
+
   $: incompletedtodo = todos.filter((todo) => {
     return !completedtodo.includes(todo);
   });
-  $: noOfItems = Math.abs(todos.length - completedtodo.length);
+  $: noOfItems = incompletedtodo.length;
   // $: localStorage.setItem("todos", JSON.stringify(todos));
 
   // window.onload = function () {
@@ -99,14 +101,12 @@
       todos.forEach((todo) => {
         todo.state = false;
       });
-      console.log("Not clicked");
     } else {
       checkedAll = true;
       completedtodo = todos;
       todos.forEach((todo) => {
         todo.state = true;
       });
-      console.log("clicked");
     }
   }
 
@@ -128,8 +128,8 @@
     }
   }
 
-  // $: console.log(completedtodo);
   // $: console.log(incompletedtodo);
+  // $: console.log(completedtodo);
 </script>
 
 <div class="container" class:invalid={!todoTextValid}>
@@ -207,6 +207,7 @@
     padding: 1em 1.5em;
     color: var(--ft-clr-300);
     font-size: 0.8rem;
+    border-radius: 0 0 5px 5px;
     background-color: var(--clr-bg-container);
   }
 

@@ -15,7 +15,6 @@
       todoDone = true;
       completedItems();
     }
-    // todoDone ? (todoDone = false) : (todoDone = true);
   }
 </script>
 
