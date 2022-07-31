@@ -96,9 +96,17 @@
     if (checkedAll) {
       checkedAll = false;
       completedtodo = [];
+      todos.forEach((todo) => {
+        todo.state = false;
+      });
+      console.log("Not clicked");
     } else {
       checkedAll = true;
       completedtodo = todos;
+      todos.forEach((todo) => {
+        todo.state = true;
+      });
+      console.log("clicked");
     }
   }
 
@@ -120,19 +128,20 @@
     }
   }
 
-  $: console.log(completedtodo);
-  $: console.log(incompletedtodo);
+  // $: console.log(completedtodo);
+  // $: console.log(incompletedtodo);
 </script>
 
 <div class="container" class:invalid={!todoTextValid}>
   <CustomCheckbox checked={checkedAll} on:click={selectAll} />
-  <TextInput
-    type="text"
-    {value}
-    on:input={getText}
-    on:focus={() => (value = "")}
-  />
-  <button on:click={addTodo}>Go</button>
+  <form novalidate on:submit|preventDefault={addTodo}>
+    <TextInput
+      type="text"
+      {value}
+      on:input={getText}
+      on:focus={() => (value = "")}
+    />
+  </form>
 </div>
 
 {#if !todoTextValid}
@@ -173,13 +182,17 @@
 
   .container {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 10% 90%;
     place-items: center;
     background-color: var(--clr-bg-container);
     width: 100%;
     margin-bottom: 1em;
     padding: 0.65em 1em;
     border-radius: 5px;
+  }
+
+  .container > form {
+    place-self: start;
   }
 
   .wrapper {
