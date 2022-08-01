@@ -1,10 +1,9 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import src from "../assets/images/image-jeremy.png";
+  // import { profile } from "../assets/js/picture.js";
 
-  import { profile } from "../assets/js/picture";
-
-  let src = profile;
-
+  // let src = profile;
   const dispatch = createEventDispatcher();
 </script>
 

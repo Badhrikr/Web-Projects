@@ -1,8 +1,22 @@
 <script>
-  import { loop_guard } from "svelte/internal";
-
   import Info from "./lib/info.svelte";
   import Profile from "./lib/profile.svelte";
+  import dataAPI from "./assets/js/data.json";
+
+  // let dataAPI = "src/assets/js/data.json";
+  // fetch(dataAPI)
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     data.forEach((item) => {
+  //       timeframes = [...timeframes, item.timeframes];
+  //       title = [...title, item.title];
+  //     });
+  //   });
+
+  $: dataAPI.forEach((item) => {
+    timeframes = [...timeframes, item.timeframes];
+    title = [...title, item.title];
+  });
 
   let title = [];
   let timeframes = [];
@@ -11,15 +25,6 @@
   let weeklyTime = [];
   let previousTime = ["0", "0", "0", "0", "0", "0"];
   let currentTime = ["0", "0", "0", "0", "0", "0"];
-
-  fetch("src/assets/js/data.json")
-    .then((res) => res.json())
-    .then((data) => {
-      data.forEach((item) => {
-        timeframes = [...timeframes, item.timeframes];
-        title = [...title, item.title];
-      });
-    });
 
   function daily() {
     currentTime = previousTime = [];
