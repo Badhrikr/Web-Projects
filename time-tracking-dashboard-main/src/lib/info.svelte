@@ -1,11 +1,11 @@
 <script>
-  import { picture } from "../assets/js/picture";
+  import Img from "../assets/images/icon-ellipsis.svg";
+  // import { picture } from "../assets/js/picture";
+  // let img = picture;
 
   export let category;
   export let duration;
   export let lastDuration;
-
-  let img = picture;
 </script>
 
 <div class={`container bg-no-repeat rounded-2xl  pt-2 ${$$props.class}`}>
@@ -14,7 +14,7 @@
   >
     <div class="flex items-center justify-between w-full mb-2">
       <h1>{category}</h1>
-      <img src={img[0]} class="cursor-pointer " alt="A Menu Button" />
+      <img src={Img} class="cursor-pointer " alt="A Menu Button" />
     </div>
 
     <div class="flex items-center justify-between w-full md:block">
