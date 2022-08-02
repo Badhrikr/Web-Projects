@@ -126,14 +126,14 @@
   @media (min-width: 48em) {
     .container {
       display: grid;
-      grid-template-columns: repeat(3, 200px);
+      grid-template-columns: repeat(3, 250px);
     }
   }
 
   @media (min-width: 60em) {
     .container {
       display: grid;
-      grid-template-columns: repeat(4, 200px);
+      grid-template-columns: repeat(4, 250px);
     }
   }
 </style>

@@ -9,16 +9,16 @@
 
 <div class={`container rounded-2xl ${$$props.class}`}>
   <div
-    class="flex items-center p-8 profile rounded-2xl md:flex-col md:items-start md:h-2/3 md:p-6"
+    class="flex items-center p-8 profile rounded-2xl md:flex-col md:items-start md:h-2/3 md:p-7"
   >
     <img
       {src}
       alt="Jeremy Robson"
-      class="w-20 mr-4 border-4 rounded-full profile__img md:mb-8 md:w-16"
+      class="w-20 mr-4 border-4 rounded-full profile__img md:mb-8"
     />
     <div class="profile__name md:text-sm">
       Report for
-      <span class="block text-2xl font-light text-white md:text-3xl"
+      <span class="block text-2xl font-light text-white md:text-4xl"
         >Jeremy Robson</span
       >
     </div>
@@ -28,15 +28,15 @@
     class="flex justify-between px-8 py-6 control-center rounded-2xl md:flex-col md:items-start md:justify-between md:h-1/3"
   >
     <button
-      class="text-xl cursor-pointer hover:text-white md:text-sm"
+      class="text-xl cursor-pointer hover:text-white md:text-xl"
       on:click={() => dispatch("daily")}>Daily</button
     >
     <button
-      class="text-xl cursor-pointer hover:text-white md:text-sm"
+      class="text-xl cursor-pointer hover:text-white md:text-xl"
       on:click={() => dispatch("weekly")}>Weekly</button
     >
     <button
-      class="text-xl cursor-pointer hover:text-white md:text-sm"
+      class="text-xl cursor-pointer hover:text-white md:text-xl"
       on:click={() => dispatch("monthly")}>Monthly</button
     >
   </div>
@@ -71,7 +71,7 @@
 
   @media (min-width: 60em) {
     .container {
-      max-width: 200px;
+      max-width: 250px;
     }
   }
 </style>

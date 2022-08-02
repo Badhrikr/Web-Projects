@@ -13,12 +13,12 @@
     class="flex flex-col items-center justify-between mt-8 p-7 rounded-2xl category-content"
   >
     <div class="flex items-center justify-between w-full mb-2">
-      <h1>{category}</h1>
+      <h1 class="md:text-xl">{category}</h1>
       <img src={Img} class="cursor-pointer " alt="A Menu Button" />
     </div>
 
     <div class="flex items-center justify-between w-full md:block">
-      <p class="text-3xl font-light category-duration md:text-4xl md:mb-2">
+      <p class="text-3xl font-light category-duration md:text-6xl md:mb-2">
         {duration}hrs
       </p>
       <p class="last">Last Week - {lastDuration}hrs</p>
@@ -75,7 +75,7 @@
 
   @media (min-width: 60em) {
     .container {
-      max-width: 200px;
+      max-width: 250px;
     }
   }
 </style>
