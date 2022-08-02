@@ -2,8 +2,8 @@
   import { createEventDispatcher } from "svelte";
   import src from "../assets/images/image-jeremy.png";
   // import { profile } from "../assets/js/picture.js";
-
   // let src = profile;
+
   const dispatch = createEventDispatcher();
 </script>
 

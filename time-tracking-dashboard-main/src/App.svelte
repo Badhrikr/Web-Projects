@@ -123,7 +123,14 @@
 </div>
 
 <style>
-  @media (min-width: 48em) {
+  @media (min-width: 33em) {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 250px);
+    }
+  }
+
+  @media (min-width: 55em) {
     .container {
       display: grid;
       grid-template-columns: repeat(3, 250px);
