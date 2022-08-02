@@ -137,7 +137,7 @@
     }
   }
 
-  @media (min-width: 60em) {
+  @media (min-width: 71em) {
     .container {
       display: grid;
       grid-template-columns: repeat(4, 250px);
