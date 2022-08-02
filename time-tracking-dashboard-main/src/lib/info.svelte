@@ -12,8 +12,8 @@
   <div
     class="flex flex-col items-center justify-between mt-8 p-7 rounded-2xl category-content md:mt-9"
   >
-    <div class="flex items-center justify-between w-full mb-2">
-      <h1 class="md:text-xl md:mb-4">{category}</h1>
+    <div class="flex items-center justify-between w-full mb-2 md:mb-4">
+      <h1 class="md:text-xl">{category}</h1>
       <img src={Img} class="cursor-pointer " alt="A Menu Button" />
     </div>
 
