@@ -9,16 +9,17 @@
 
 <div class={`container rounded-2xl ${$$props.class}`}>
   <div
-    class="flex items-center p-8 profile rounded-2xl md:flex-col md:items-start md:h-2/3 md:p-7"
+    class="flex items-center p-8 profile rounded-2xl md:flex-col md:items-start md:h-2/3 md:p-7 md:py-9"
   >
     <img
       {src}
       alt="Jeremy Robson"
-      class="w-20 mr-4 border-4 rounded-full profile__img md:mb-8"
+      class="w-20 mr-4 border-4 rounded-full profile__img md:mb-10"
     />
     <div class="profile__name md:text-sm">
       Report for
-      <span class="block text-2xl font-light text-white md:text-4xl"
+      <span
+        class="block text-2xl font-light text-white md:text-4xl md:mt-1 md:leading-tight"
         >Jeremy Robson</span
       >
     </div>
