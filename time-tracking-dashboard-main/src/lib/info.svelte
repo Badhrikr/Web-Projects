@@ -8,7 +8,7 @@
   export let lastDuration;
 </script>
 
-<div class={`container bg-no-repeat rounded-2xl  pt-2 ${$$props.class}`}>
+<div class={`container bg-no-repeat rounded-2xl pt-2 ${$$props.class}`}>
   <div
     class="flex flex-col items-center justify-between mt-8 p-7 rounded-2xl category-content md:mt-9"
   >
