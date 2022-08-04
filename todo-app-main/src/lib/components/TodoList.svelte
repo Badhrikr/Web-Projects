@@ -47,16 +47,16 @@
     return !completedtodo.includes(todo);
   });
   $: noOfItems = incompletedtodo.length;
-  // $: localStorage.setItem("todos", JSON.stringify(todos));
+  $: localStorage.setItem("todos", JSON.stringify(todos));
 
-  // window.onload = function () {
-  //   let myObj = localStorage.getItem("todos");
-  //   if (myObj != null) {
-  //     todos = [...JSON.parse(myObj)];
-  //   } else {
-  //     todos = [];
-  //   }
-  // };
+  window.onload = function () {
+    let myObj = localStorage.getItem("todos");
+    if (myObj != null) {
+      todos = [...JSON.parse(myObj)];
+    } else {
+      todos = [];
+    }
+  };
 
   function getText(event) {
     todoText = event.target.value;

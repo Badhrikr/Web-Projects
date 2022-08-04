@@ -1,6 +1,6 @@
 <header>
   <h1>Todo</h1>
-  <button class="theme" />
+  <span class="theme" />
 </header>
 
 <style>
@@ -19,7 +19,7 @@
     letter-spacing: 10px;
   }
 
-  button {
+  span {
     all: unset;
     cursor: pointer;
   }
