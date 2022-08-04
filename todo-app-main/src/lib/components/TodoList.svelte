@@ -193,6 +193,7 @@
 
   .container > form {
     place-self: start;
+    width: 100%;
   }
 
   .wrapper {

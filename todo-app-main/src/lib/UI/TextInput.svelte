@@ -14,5 +14,7 @@
     background-color: transparent;
     border: none;
     outline: none;
+    word-wrap: break-word;
+    word-break: break-all;
   }
 </style>
