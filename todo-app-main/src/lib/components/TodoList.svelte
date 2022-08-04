@@ -43,8 +43,6 @@
   let noOfItems = 0;
   let checkedAll = false;
 
-  // $: noOfItems = Math.abs(todos.length - completedtodo.length);
-
   $: incompletedtodo = todos.filter((todo) => {
     return !completedtodo.includes(todo);
   });
@@ -199,13 +197,14 @@
 
   .wrapper {
     border-radius: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .listinfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 1em 1.5em;
     color: var(--ft-clr-300);
     font-size: 0.8rem;
@@ -214,11 +213,15 @@
   }
 
   .control-center {
+    position: absolute;
+    left: 0;
+    bottom: -5em;
     justify-content: center;
     gap: 2em;
+    width: 100%;
+    padding: 1em 1.5em;
     font-weight: 700;
     border-radius: 5px;
-    padding: 0;
   }
 
   .control-center > button:where(:hover, :focus) {
@@ -231,21 +234,20 @@
     color: #f87272;
   }
 
-  @media (max-width: 50em) {
-    .wrapper {
-      overflow: visible;
+  @media (min-width: 50em) {
+    .container {
+      padding: 0.9em 1.5em;
     }
-
+    .wrapper {
+      overflow: hidden;
+    }
     .listinfo {
-      position: relative;
+      padding: 0.5em 2em;
     }
 
     .control-center {
-      position: absolute;
-      left: 0;
-      bottom: -5em;
-      width: 100%;
-      padding: 1em 1.5em;
+      all: inherit;
+      font-weight: 700;
     }
   }
 </style>

@@ -15,4 +15,10 @@
     border: none;
     outline: none;
   }
+
+  @media (min-width: 50em) {
+    input[type="text"] {
+      font-size: 1.175rem;
+    }
+  }
 </style>

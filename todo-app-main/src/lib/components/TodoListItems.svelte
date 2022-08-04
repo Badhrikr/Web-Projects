@@ -30,7 +30,6 @@
   .checklist {
     position: relative;
     margin-left: 1em;
-    font-weight: 700;
     word-wrap: break-word;
   }
 
@@ -72,9 +71,20 @@
   }
 
   img {
-    width: 13px;
+    width: 17px;
     aspect-ratio: 1/1;
     margin-right: 1.5em;
+    opacity: 0;
+  }
+
+  .container:hover > img {
+    opacity: 1;
     cursor: pointer;
+  }
+
+  @media (min-width: 50em) {
+    .container {
+      font-size: 1.175rem;
+    }
   }
 </style>

@@ -23,4 +23,14 @@
     all: unset;
     cursor: pointer;
   }
+
+  @media (min-width: 50em) {
+    header {
+      margin-block: 4em 1.5em;
+      padding: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
 </style>

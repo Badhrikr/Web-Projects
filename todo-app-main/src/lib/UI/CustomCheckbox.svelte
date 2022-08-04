@@ -28,4 +28,10 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @media (min-width: 50em) {
+    button {
+      width: 25px;
+    }
+  }
 </style>
