@@ -32,7 +32,6 @@
     margin-left: 1em;
     font-weight: 700;
     word-wrap: break-word;
-    word-break: break-all;
   }
 
   .checklist::after {

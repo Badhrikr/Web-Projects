@@ -169,8 +169,10 @@ select {
 }
 
 .attribution { 
+  margin-top: 8em;
   font-size: 11px; 
   text-align: center; 
+  color: var(--ft-clr-500);
 }
 
 .attribution a { 
@@ -197,11 +199,6 @@ body{
   width: 100%;
 }
 
-/* .light{
-  background-color: var(--ft-clr-500-light);
-  background-image: url(../assets/images/bg-mobile-light.jpg);
-} */
-
 @media (min-width: 50em) {
   body{
     background-image: var(--bg-img-dark-desktop);
@@ -209,8 +206,7 @@ body{
     background-size: 100%;
   }
 
-  /* .light{
-    background-color: var(--ft-clr-500-light);
-    background-image: url(../assets/images/bg-desktop-light.jpg);
-  } */
+  .attribution{
+    margin-top: 2em;
+  }
 }

@@ -183,7 +183,8 @@
   .container {
     display: grid;
     grid-template-columns: 10% 90%;
-    place-items: center;
+    justify-content: start;
+    align-items: center;
     background-color: var(--clr-bg-container);
     width: 100%;
     margin-bottom: 1em;
