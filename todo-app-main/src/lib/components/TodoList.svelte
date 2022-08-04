@@ -162,12 +162,12 @@
   {#if todos.length > 0}
     <div class="listinfo">
       <p class="items-count">{noOfItems} items left</p>
+      <div class="listinfo control-center">
+        <button class="all">All</button>
+        <button class="active">Active</button>
+        <button class="completed">Completed</button>
+      </div>
       <button on:click={clear}>Clear Completed</button>
-    </div>
-    <div class="listinfo control-center">
-      <button class="all">All</button>
-      <button class="active">Active</button>
-      <button class="completed">Completed</button>
     </div>
   {/if}
 </div>
@@ -214,9 +214,9 @@
   .control-center {
     justify-content: center;
     gap: 2em;
-    margin-top: 2em;
     font-weight: 700;
     border-radius: 5px;
+    padding: 0;
   }
 
   .control-center > button:where(:hover, :focus) {
@@ -227,5 +227,23 @@
   .invalid {
     margin-bottom: 0.5em;
     color: #f87272;
+  }
+
+  @media (max-width: 50em) {
+    .wrapper {
+      overflow: visible;
+    }
+
+    .listinfo {
+      position: relative;
+    }
+
+    .control-center {
+      position: absolute;
+      left: 0;
+      bottom: -5em;
+      width: 100%;
+      padding: 1em 1.5em;
+    }
   }
 </style>

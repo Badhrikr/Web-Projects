@@ -29,6 +29,7 @@
 <style>
   .checklist {
     padding-left: 1em;
+    font-weight: 700;
   }
 
   .done {

@@ -7,17 +7,15 @@
   function themeswitch() {
     if (switched === false) {
       switched = true;
-      document.querySelector("body").classList.add("light");
     } else {
       switched = false;
-      document.querySelector("body").classList.remove("light");
     }
   }
 </script>
 
 <header>
   <h1>Todo</h1>
-  <button on:click={themeswitch}>
+  <button class="theme" on:click={themeswitch}>
     {#if switched === false}
       <img src={srcSun} alt="A sun logo" />
     {:else}

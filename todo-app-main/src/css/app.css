@@ -6,45 +6,92 @@
   --clr-bg-body: hsl(235, 21%, 11%);
   --clr-bg-container: hsl(235, 24%, 19%);
 
+  --bg-img-dark-desktop: url(../assets/images/bg-desktop-dark.jpg);
+  --bg-img-dark-mobile: url(../assets/images/bg-mobile-dark.jpg);
+  
   --ft-clr-500: hsl(234, 39%, 85%);
   --ft-clr-500-hover: hsl(236, 33%, 92%);
   --ft-clr-400: hsl(234, 11%, 52%);
   --ft-clr-300: hsl(233, 14%, 35%);
   --ft-clr-200:hsl(237, 14%, 26%);
 
-  --ft-clr-500-light: hsl(0, 0%, 98%);
-  --ft-clr-400-light: hsl(236, 33%, 92%);
+  /* light theme */
+  --bg-img-light-desktop: url(../assets/images/bg-desktop-light.jpg);
+  --bg-img-light-mobile:  url(../assets/images/bg-mobile-light.jpg);
+
+  --clr-bg-container-light: hsl(0, 0%, 98%);
+  --clr-bg-body-light: hsl(236, 33%, 92%);
   --ft-clr-300-light: hsl(233, 11%, 84%);
   --ft-clr-200-light: hsl(236, 9%, 61%);
-  --ft-clr-100-light: hsl(235, 19%, 35%);
+  --ft-clr-500-light: hsl(235, 19%, 35%);
 }
 
-/* ### Primary
 
-- Bright Blue: hsl(220, 98%, 61%)
-- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+@media(prefers-color-scheme: dark){
+  :root{
+    --clr-primary-400: hsl(220, 98%, 61%);
+    --clr-bg-start: hsl(192, 100%, 67%);
+    --clr-bg-end: hsl(280, 87%, 65%);
+  
+    --clr-bg-body: hsl(235, 21%, 11%);
+    --clr-bg-container: hsl(235, 24%, 19%);
 
-### Neutral
+    --bg-img-dark-desktop: url(../assets/images/bg-desktop-dark.jpg);
+    --bg-img-dark-mobile: url(../assets/images/bg-mobile-dark.jpg);
+    
+    --ft-clr-500: hsl(234, 39%, 85%);
+    --ft-clr-500-hover: hsl(236, 33%, 92%);
+    --ft-clr-400: hsl(234, 11%, 52%);
+    --ft-clr-300: hsl(233, 14%, 35%);
+    --ft-clr-200:hsl(237, 14%, 26%);
+  }
+}
 
-### Light Theme
+@media(prefers-color-scheme: light){
+  :root{
+    --bg-img-dark-desktop: var(--bg-img-light-desktop);
+    --bg-img-dark-mobile:  var(--bg-img-light-mobile);
 
-- Very Light Gray: hsl(0, 0%, 98%)
-- Very Light Grayish Blue: hsl(236, 33%, 92%)
-- Light Grayish Blue: hsl(233, 11%, 84%)
-- Dark Grayish Blue: hsl(236, 9%, 61%)
-- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+    --clr-bg-body: var(--clr-bg-body-light);
+    --clr-bg-container: var(--clr-bg-container-light);
 
-### Dark Theme
+    --ft-clr-500: var(--ft-clr-500-light);
+    --ft-clr-400: var(--ft-clr-200-light)
+    --ft-clr-300: var(--ft-clr-300-light)
+    --ft-clr-200: var(--ft-clr-200-light);
+  }
+}
 
-- Very Dark Blue: hsl(235, 21%, 11%)
-- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
-- Light Grayish Blue: hsl(234, 39%, 85%)
-- Light Grayish Blue (hover): hsl(236, 33%, 92%)
-- Dark Grayish Blue: hsl(234, 11%, 52%)
-- Very Dark Grayish Blue: hsl(233, 14%, 35%)
-- Very Dark Grayish Blue: hsl(237, 14%, 26%) */
+[color-scheme = "dark"]{
+  --clr-primary-400: hsl(220, 98%, 61%);
+  --clr-bg-start: hsl(192, 100%, 67%);
+  --clr-bg-end: hsl(280, 87%, 65%);
 
+  --clr-bg-body: hsl(235, 21%, 11%);
+  --clr-bg-container: hsl(235, 24%, 19%);
 
+  --bg-img-dark-desktop: url(../assets/images/bg-desktop-dark.jpg);
+  --bg-img-dark-mobile: url(../assets/images/bg-mobile-dark.jpg);
+  
+  --ft-clr-500: hsl(234, 39%, 85%);
+  --ft-clr-500-hover: hsl(236, 33%, 92%);
+  --ft-clr-400: hsl(234, 11%, 52%);
+  --ft-clr-300: hsl(233, 14%, 35%);
+  --ft-clr-200:hsl(237, 14%, 26%);
+}
+
+[color-scheme = "light"]{
+  --bg-img-dark-desktop: var(--bg-img-light-desktop);
+  --bg-img-dark-mobile:  var(--bg-img-light-mobile);
+
+  --clr-bg-body: var(--clr-bg-body-light);
+  --clr-bg-container: var(--clr-bg-container-light);
+
+  --ft-clr-500: var(--ft-clr-500-light);
+  --ft-clr-400: var(--ft-clr-200-light)
+  --ft-clr-300: var(--ft-clr-300-light)
+  --ft-clr-200: var(--ft-clr-200-light);
+}
 
 /* Box sizing rules */
 *,
@@ -135,7 +182,7 @@ body{
   flex-direction: column;
   align-items: center;
   background-color: var(--clr-bg-body);
-  background-image: url(../assets/images/bg-mobile-dark.jpg);
+  background-image: var(--bg-img-dark-mobile);
   background-repeat: no-repeat;
   background-size: 100%;
   font-family: 'Josefin Sans', sans-serif;
@@ -150,20 +197,20 @@ body{
   width: 100%;
 }
 
-.light{
+/* .light{
   background-color: var(--ft-clr-500-light);
   background-image: url(../assets/images/bg-mobile-light.jpg);
-}
+} */
 
 @media (min-width: 50em) {
   body{
-    background-image: url(../assets/images/bg-desktop-dark.jpg);
+    background-image: var(--bg-img-dark-desktop);
     background-repeat: no-repeat;
     background-size: 100%;
   }
 
-  .light{
+  /* .light{
     background-color: var(--ft-clr-500-light);
     background-image: url(../assets/images/bg-desktop-light.jpg);
-  }
+  } */
 }

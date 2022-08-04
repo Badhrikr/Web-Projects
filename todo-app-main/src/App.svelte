@@ -11,6 +11,6 @@
 <style>
   .container {
     width: 86%;
-    max-width: 600px;
+    max-width: 500px;
   }
 </style>
