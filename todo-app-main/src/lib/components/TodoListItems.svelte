@@ -28,12 +28,27 @@
 
 <style>
   .checklist {
-    padding-left: 1em;
+    position: relative;
+    margin-left: 1em;
     font-weight: 700;
   }
 
-  .done {
-    text-decoration: line-through;
+  .checklist::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2.5%;
+    width: 105%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .done::after {
+    content: "";
+    transform: scaleX(1);
   }
 
   .container {
