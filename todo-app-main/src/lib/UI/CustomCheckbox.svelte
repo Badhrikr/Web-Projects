@@ -2,10 +2,10 @@
   export let checked = false;
 </script>
 
-<button class:checked on:click />
+<span class:checked on:click />
 
 <style>
-  button {
+  span {
     width: 20px;
     aspect-ratio: 1/1;
     background-color: transparent;
@@ -30,7 +30,7 @@
   }
 
   @media (min-width: 50em) {
-    button {
+    span {
       width: 25px;
     }
   }

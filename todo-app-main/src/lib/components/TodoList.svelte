@@ -49,7 +49,7 @@
   $: noOfItems = incompletedtodo.length;
   $: localStorage.setItem("todos", JSON.stringify(todos));
 
-  window.onload = function () {
+  $: window.onload = function () {
     let myObj = localStorage.getItem("todos");
     if (myObj != null) {
       todos = [...JSON.parse(myObj)];
