@@ -1,0 +1,10 @@
+.result-card {
+  background: linear-gradient(to bottom, var(--slate-blue), var(--royal-blue));
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+@media (min-width: 50em) {
+  .result-card {
+    border-radius: 1.5rem;
+  }
+}

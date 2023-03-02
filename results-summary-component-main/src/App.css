@@ -1,0 +1,18 @@
+.app {
+  width: 100%;
+  max-width: 36em;
+  min-height: 100vh;
+}
+
+.app > * {
+  width: 100%;
+}
+
+@media (min-width: 50em) {
+  .app {
+    min-height: auto;
+    box-shadow: 10px 10px 10px var(--pale-blue);
+    overflow: hidden;
+    border-radius: 1.5rem;
+  }
+}

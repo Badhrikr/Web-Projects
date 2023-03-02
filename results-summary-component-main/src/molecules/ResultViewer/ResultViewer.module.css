@@ -1,0 +1,10 @@
+.result {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(
+    to bottom,
+    var(--violet-blue),
+    var(--persian-blue)
+  );
+  border-radius: 50%;
+}

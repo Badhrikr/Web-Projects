@@ -1,0 +1,22 @@
+.category {
+  --light-red-ft: hsla(0, 100%, 67%);
+  --orange-yellow-ft: hsla(39, 100%, 56%);
+  --green-teal-ft: hsla(166, 100%, 37%);
+  --cobalt-blue-ft: hsla(234, 85%, 45%);
+}
+
+/* .category:nth-child(1) {
+  color: var(--light-red-ft);
+}
+
+.category:nth-child(2) {
+  color: var(--orange-yellow-ft);
+}
+
+.category:nth-child(3) {
+  color: var(--green-teal-ft);
+}
+
+.category:nth-child(4) {
+  color: var(--cobalt-blue-ft);
+} */
