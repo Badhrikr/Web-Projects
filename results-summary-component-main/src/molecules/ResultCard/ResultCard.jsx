@@ -7,9 +7,9 @@ import styles from "./ResultCard.module.css";
 function ResultCard() {
   return (
     <Card
-      className={`${styles["result-card"]} flex flex-col items-center justify-center p-5 pb-9 md:p-7 md:pb-10`}
+      className={`${styles["result-card"]} flex flex-col items-center justify-center p-5 pb-9`}
     >
-      <Text className={"mb-5 text-xl clr-text md:mb-6"}>Your Result</Text>
+      <Text className={"mb-5 text-lg clr-text md:mb-6"}>Your Result</Text>
       <ResultViewer />
       <Text className={"text-2xl font-bold text-white mb-1 md:mb-2"}>
         Great

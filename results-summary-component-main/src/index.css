@@ -5,10 +5,11 @@
 :root {
   /* Brand Colors */
 
-  --light-red: hsla(0, 100%, 67%, 0.1);
-  --orange-yellow: hsla(39, 100%, 56%, 0.1);
-  --green-teal: hsla(166, 100%, 37%, 0.1);
-  --cobalt-blue: hsla(234, 85%, 45%, 0.1);
+  --bg-light-red: hsla(0, 100%, 67%, 0.1);
+  --bg-orange-yellow: hsla(39, 100%, 56%, 0.1);
+  --bg-green-teal: hsla(166, 100%, 37%, 0.1);
+  --bg-cobalt-blue: hsla(234, 85%, 45%, 0.1);
+
   --light-red-ft: hsla(0, 100%, 67%);
   --orange-yellow-ft: hsla(39, 100%, 56%);
   --green-teal-ft: hsla(166, 100%, 37%);
@@ -133,4 +134,5 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--white);
+  font-size: 1.175rem;
 }

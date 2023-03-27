@@ -22,11 +22,11 @@ function ResultSummaryCard(props) {
             statName={data.category}
             mark={data.score}
             bgStats={data["bg-stats"]}
-            className={`${styles.category}`}
+            textColor={data["text-color"]}
           />
         );
       })}
-      <Button label="Continue" className="mt-1 btn md:p-3 md:text-sm" />
+      <Button label="Continue" className="mt-4 btn md:p-3 md:text-sm" />
     </Card>
   );
 }
