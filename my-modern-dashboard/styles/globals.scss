@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./mixins";
+@import "./animations.scss";
+// @import "./calendar.scss";
+
+@layer base {
+  .theme-light {
+    // app
+    --primary: #252c87;
+    --secondary: #0f52ba;
+
+    // text color
+    --text-primary: #ffffff;
+    --text-secondary: #000000bf;
+
+    // svg color
+    --svg-primary: #ffffff;
+    --svg-secondary: #000000bf;
+
+    // border color
+    --border-primary: #252c87;
+    --border-secondary: #252c87;
+
+    --background-primary: #f5f6fa;
+    --background-secondary: #dedede40;
+
+    --background-body: #e8e9f2;
+
+    --background-nav: #0f52ba;
+    --background-popup: rgba(255, 255, 255);
+    --background-elevate: rgb(255, 255, 255);
+
+    --background-input: #fff;
+    --loading-color: #252c87;
+
+    --zebra-bg: #00000005;
+    --background-button-elevate: #091e420a;
+    --gray-border: #ccc;
+  }
+
+  // shades
+  .theme-light {
+    @include shades("primary", #252c87);
+    @include shades("secondary", #0f52ba);
+    @include shades("text-primary", #ffffff);
+    @include shades("text-secondary", #000);
+    @include shades("svg-primary", #ffffff);
+    @include shades("svg-secondary", #000);
+    @include shades("border-primary", #252c87);
+    @include shades("border-secondary", #252c87);
+  }
+
+  .theme-dark {
+    // app
+    --primary: #252c87;
+    --secondary: #0f52ba;
+
+    // text color
+    --text-primary: #ffffffd1;
+    --text-secondary: #ffffff99;
+
+    // svg color
+    --svg-primary: #ffffffd1;
+    --svg-secondary: #ffffff99;
+
+    // border color
+    --border-primary: #010101;
+    --border-secondary: #252c87;
+
+    --background-primary: #121212;
+    --background-secondary: rgba(255, 255, 255, 0.05);
+
+    --background-body: rgba(10, 10, 10);
+
+    --background-nav: #222323;
+    --background-popup: #222323;
+    --background-elevate: rgba(255, 255, 255, 0.05);
+
+    --background-input: #222323;
+    --loading-color: ffffffd1;
+
+    --zebra-bg: rgba(255, 255, 255, 0.05);
+    --background-button-elevate: rgba(255, 255, 255, 0.05);
+    --gray-border: #6d6a6a;
+  }
+
+  .theme-dark {
+    @include shades("primary", #252c87);
+    @include shades("secondary", #0f52ba);
+    @include shades("text-primary", #fff);
+    @include shades("text-secondary", #fff);
+    @include shades("svg-primary", #fff);
+    @include shades("svg-secondary", #fff);
+    @include shades("border-primary", #010101);
+    @include shades("border-secondary", #252c87);
+  }
+}
+
+.scrollbar-on-hover,
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.3s;
+
+  // &:hover {
+  //   scrollbar-color: black transparent;
+  // }
+
+  &:not(:hover)::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    transition: background 0.3s;
+    background: rgb(107, 114, 128);
+  }
+}
+
+.elevate {
+  @apply origin-center transition duration-300;
+
+  &:hover {
+    @apply scale-105;
+  }
+}
+
+.child-elevate {
+  & > * {
+    @apply origin-center transition duration-300;
+  }
+
+  &:hover > * {
+    @apply scale-105;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+mgt-login {
+  .line1 {
+    color: red !important;
+  }
+}
+
+// .root {
+//   .login-button {
+//     .line1 {
+//       background: red !important;
+//     }
+//   }
+// }
+
+.flex-center-center {
+  @apply flex justify-center items-center gap-1;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #printarea,
+  #printarea * {
+    visibility: visible;
+  }
+
+  #printarea {
+    position: absolute;
+    inset: 0;
+  }
+}
