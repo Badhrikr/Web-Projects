@@ -1,4 +1,13 @@
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Frontend Mentor | Social links profile",
+  description: "Frontend Mentor | Social links profile",
+  icons: {
+    icon: "/images/favicon-32x32.png",
+  },
+};
 
 export default function Home() {
   const socialMedias = [
