@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: hsl(75, 94%, 57%);
+  --neutral: hsl(0, 0%, 100%);
+
+  --bg-secondary: hsl(0, 0%, 12%);
+  --bg-primary: hsl(0, 0%, 8%);
+
+  --bg-button: hsl(0, 0%, 20%);
+}
