@@ -1,0 +1,20 @@
+[
+  {
+    "responsibilityId": "101",
+    "title": "Upload the source code",
+    "description": "Upload the source code of the migration project",
+    "owner": "Kumaran"
+  },
+  {
+    "responsibilityId": "102",
+    "title": "Code Documentation",
+    "description": "Upload the source code of the migration project",
+    "owner": "IHS Markit"
+  },
+  {
+    "responsibilityId": "103",
+    "title": "Add One Pager Technical Stack",
+    "description": "Upload the One Pager technical stack as ppt",
+    "owner": "IHS Markit"
+  }
+]

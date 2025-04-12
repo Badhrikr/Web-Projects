@@ -1,0 +1,8 @@
+@mixin shades($key, $color) {
+  $i: 50;
+
+  @while $i <= 900 {
+    #{'--'}#{$key}-#{$i}: rgba($color, $i/1000);
+    $i: $i + 50;
+  }
+}

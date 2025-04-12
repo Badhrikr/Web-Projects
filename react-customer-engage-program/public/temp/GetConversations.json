@@ -1,0 +1,315 @@
+[
+  {
+    "conversationId": "101",
+    "conversationType": "chosenMigrationRequest",
+    "data": {
+      "offeringName": "string",
+      "offeringDescription": "string",
+      "offeringIcon": "string"
+    }
+  },
+  {
+    "conversationId": "102",
+    "conversationType": "chosenMigrationType",
+    "data": {
+      "offeringTypeName": "string",
+      "offeringTypeDescription": "string",
+      "offering_type_icon": "string"
+    }
+  },
+  {
+    "conversationId": "103",
+    "conversationType": "technologies",
+    "data": [
+      {
+        "componentName": "FrontEnd",
+        "fromTech": "Oracle Forms",
+        "toTech": "Angular"
+      },
+      {
+        "componentName": "Middleware",
+        "fromTech": "Oracle Forms",
+        "toTech": "Angular"
+      },
+      {
+        "componentName": "Database",
+        "fromTech": "MySQL",
+        "toTech": "PostgreSQL"
+      },
+      {
+        "componentName": "Scheduler",
+        "fromTech": "NA",
+        "toTech": "NA"
+      },
+      {
+        "componentName": "Batch",
+        "fromTech": "NA",
+        "toTech": "NA"
+      }
+    ]
+  },
+  {
+    "conversationId": "104",
+    "conversationType": "processInitiated",
+    "data": {
+      "title": "Sign an NDA",
+      "desc": "Sign an Non disclosure agreement"
+    },
+    "createdBy": "",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "105",
+    "conversationType": "fileUpload",
+    "data": [
+      {
+        "fileId": "",
+        "fileName": "nda-document.pdf",
+        "fileSize": 129121,
+        "uploadType": "Functionalwalkthrough"
+      },
+      {
+        "fileId": "",
+        "fileName": "proposal.txt",
+        "fileSize": 129121,
+        "uploadType": "Artifacts"
+      },
+      {
+        "fileId": "",
+        "fileName": "proposal.txt",
+        "fileSize": 129121,
+        "uploadType": "Artifacts"
+      },
+      {
+        "fileId": "",
+        "fileName": "proposal.txt",
+        "fileSize": 129121,
+        "uploadType": "Artifacts"
+      }
+    ],
+    "createdBy": "sales1@testmail.com",
+    "userName": "Gowtham Ravi",
+    "organisationLogo": "/kumaran-logo.png",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "106",
+    "conversationType": "fileUpload",
+    "data": [
+      {
+        "fileId": "",
+        "fileName": "nda-document.pdf",
+        "fileSize": 129121,
+        "uploadType": "Functionalwalkthrough"
+      }
+    ],
+    "createdBy": "sales1@testmail.com",
+    "userName": "Gowtham Ravi",
+    "organisationLogo": "/kumaran-logo.png",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "107",
+    "conversationType": "fileUpload",
+    "data": [
+      {
+        "fileId": "",
+        "fileName": "nda-document.pdf",
+        "fileSize": 129121,
+        "uploadType": "Functionalwalkthrough"
+      },
+      {
+        "fileId": "",
+        "fileName": "nda-document.pdf",
+        "fileSize": 129121,
+        "uploadType": "Functionalwalkthrough"
+      }
+    ],
+    "createdBy": "sales1@testmail.com",
+    "organisationLogo": "/kumaran-logo.png",
+    "userName": "Gowtham Ravi",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "108",
+    "conversationType": "processUpdated",
+    "data": {
+      "title": "Sign an NDA",
+      "desc": "Sign an Non disclosure agreement",
+      "status": "Todo",
+      "remarks": "Having some difficulties processing the request. Will rectify it soon."
+    },
+    "createdBy": "",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "109",
+    "conversationType": "processUpdated",
+    "data": {
+      "title": "Sign an NDA",
+      "desc": "Sign an Non disclosure agreement",
+      "status": "WIP",
+      "remarks": "Issues resolved. Now the ball is in customer's court."
+    },
+    "createdBy": "",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "110",
+    "conversationType": "processUpdated",
+    "data": {
+      "title": "Sign an NDA",
+      "desc": "Sign an Non disclosure agreement",
+      "status": "Completed",
+      "remarks": "Received the signed document successfully. Will initiate the poc soon."
+    },
+    "createdBy": "",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "111",
+    "conversationType": "query",
+    "userName": "Gowtham Ravi",
+    "organisationLogo": "/kumaran-logo.png",
+    "data": {
+      "message": "Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning",
+      "userName": "Gowtham Ravi",
+      "createdBy": "sales1@testmail.com",
+      "createdAt": "2023-03-13T16:18:10.353Z",
+      "organisationLogo": "/kumaran-logo.png"
+    },
+    "createdBy": "customer1@testmail.com",
+    "createdAt": "2023-03-13T16:18:10.353Z"
+  },
+  {
+    "conversationId": "112",
+    "conversationType": "query",
+    "userName": "Gowtham Ravi",
+    "organisationLogo": "/kumaran-logo.png",
+    "data": {
+      "message": "Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning",
+      "userName": "Gowtham Ravi",
+      "createdBy": "sales1@testmail.com",
+      "createdAt": "2023-03-13T16:18:10.353Z",
+      "organisationLogo": "/kumaran-logo.png"
+    },
+    "createdBy": "customer1@testmail.com",
+    "createdAt": "2023-03-13T16:18:10.353Z",
+    "repliedTo": {
+      "conversationId": "111",
+      "conversationType": "query",
+      "userName": "Gowtham Ravi",
+      "organisationLogo": "/kumaran-logo.png",
+      "data": {
+        "message": "Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning",
+        "userName": "Gowtham Ravi",
+        "createdBy": "sales1@testmail.com",
+        "createdAt": "2023-03-13T16:18:10.353Z",
+        "organisationLogo": "/kumaran-logo.png"
+      },
+      "createdBy": "customer1@testmail.com",
+      "createdAt": "2023-03-13T16:18:10.353Z"
+    }
+  },
+  {
+    "conversationId": "113",
+    "conversationType": "query",
+    "userName": "Gowtham Ravi",
+    "organisationLogo": "/kumaran-logo.png",
+    "data": {
+      "message": "Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning",
+      "userName": "Gowtham Ravi",
+      "createdBy": "sales1@testmail.com",
+      "createdAt": "2023-03-13T16:18:10.353Z",
+      "organisationLogo": "/kumaran-logo.png"
+    },
+    "createdBy": "customer1@testmail.com",
+    "createdAt": "2023-03-13T16:18:10.353Z",
+    "repliedTo": {
+      "conversationId": "110",
+      "conversationType": "processUpdated",
+      "data": {
+        "title": "Sign an NDA",
+        "desc": "Sign an Non disclosure agreement",
+        "status": "Completed",
+        "remarks": "Received the signed document successfully. Will initiate the poc soon."
+      },
+      "createdBy": "",
+      "createdAt": "2023-03-13T16:18:10.353Z"
+    }
+  },
+  {
+    "conversationId": "114",
+    "conversationType": "query",
+    "userName": "Gowtham Ravi",
+    "organisationLogo": "/kumaran-logo.png",
+    "data": {
+      "message": "Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning",
+      "userName": "Gowtham Ravi",
+      "createdBy": "sales1@testmail.com",
+      "createdAt": "2023-03-13T16:18:10.353Z",
+      "organisationLogo": "/kumaran-logo.png"
+    },
+    "createdBy": "customer1@testmail.com",
+    "createdAt": "2023-03-13T16:18:10.353Z",
+    "repliedTo": {
+      "conversationId": "104",
+      "conversationType": "processInitiated",
+      "data": {
+        "title": "Sign an NDA",
+        "desc": "Sign an Non disclosure agreement"
+      },
+      "createdBy": "",
+      "createdAt": "2023-03-13T16:18:10.353Z"
+    }
+  },
+  {
+    "conversationId": "115",
+    "conversationType": "query",
+    "userName": "Gowtham Ravi",
+    "organisationLogo": "/kumaran-logo.png",
+    "data": {
+      "message": "Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning. Hi, Good Morning",
+      "userName": "Gowtham Ravi",
+      "createdBy": "sales1@testmail.com",
+      "createdAt": "2023-03-13T16:18:10.353Z",
+      "organisationLogo": "/kumaran-logo.png"
+    },
+    "createdBy": "customer1@testmail.com",
+    "createdAt": "2023-03-13T16:18:10.353Z",
+    "repliedTo": {
+      "conversationId": "105",
+      "conversationType": "fileUpload",
+      "data": [
+        {
+          "fileId": "",
+          "fileName": "nda-document.pdf",
+          "fileSize": 129121,
+          "uploadType": "Functionalwalkthrough"
+        },
+        {
+          "fileId": "",
+          "fileName": "proposal.txt",
+          "fileSize": 129121,
+          "uploadType": "Artifacts"
+        },
+        {
+          "fileId": "",
+          "fileName": "proposal.txt",
+          "fileSize": 129121,
+          "uploadType": "Artifacts"
+        },
+        {
+          "fileId": "",
+          "fileName": "proposal.txt",
+          "fileSize": 129121,
+          "uploadType": "Artifacts"
+        }
+      ],
+      "createdBy": "sales1@testmail.com",
+      "userName": "Gowtham Ravi",
+      "organisationLogo": "/kumaran-logo.png",
+      "createdAt": "2023-03-13T16:18:10.353Z"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "fileName": "project-proposal-final.txt",
+    "fileSize": "6.03mb",
+    "uploadType": "Proposal",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "Kumaran"
+  },
+  {
+    "fileName": "filename.pdf",
+    "fileSize": "3.06mb",
+    "uploadType": "Functionalwalkthrough",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "IHS Markit"
+  },
+  {
+    "fileName": "filename.xlsx",
+    "fileSize": "3.06mb",
+    "uploadType": "SourceCode",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "IHS Markit"
+  },
+  {
+    "fileName": "filename.doc",
+    "fileSize": "3.06mb",
+    "uploadType": "Timelines",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "IHS Markit"
+  },
+  {
+    "fileName": "filename.ppt",
+    "fileSize": "3.06mb",
+    "uploadType": "Artifacts",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "IHS Markit"
+  },
+  {
+    "fileName": "filename.csv",
+    "fileSize": "3.06mb",
+    "uploadType": "ProjectNDA",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "IHS Markit"
+  },
+  {
+    "fileName": "filename.pdf",
+    "fileSize": "3.06mb",
+    "uploadType": "POCNDA",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "IHS Markit"
+  },
+  {
+    "fileName": "filename.pdf",
+    "fileSize": "3.06mb",
+    "uploadType": "PurchaseOrder",
+    "uploadDate": "2023-03-03T17:56:00.035Z",
+    "authour": "IHS Markit"
+  }
+]

@@ -1,0 +1,102 @@
+.custom-calendar {
+  * {
+    @apply text-theme-secondary;
+    border-color: var(--gray-border) !important;
+  }
+
+  .rbc-toolbar {
+    @apply mb-10;
+  }
+
+  .rbc-event-content {
+    position: relative !important;
+    overflow: visible !important;
+  }
+
+  .rbc-month-row {
+    overflow: visible !important;
+  }
+
+  .rbc-month-view[role="table"] {
+    border: none !important;
+  }
+
+  .rbc-off-range-bg {
+    background: transparent;
+  }
+
+  .rbc-row-content {
+    z-index: inherit;
+  }
+
+  .rbc-today {
+    @apply bg-theme-button-elevate;
+  }
+
+  .rbc-toolbar button {
+    color: inherit;
+  }
+
+  .rbc-toolbar button:active,
+  .rbc-toolbar button.rbc-active {
+  }
+
+  .rbc-event,
+  .rbc-day-slot .rbc-background-event {
+    @apply bg-theme-primary-850;
+  }
+
+  .rbc-event.rbc-selected,
+  .rbc-day-slot .rbc-selected.rbc-background-event {
+    @apply bg-theme-secondary-850;
+  }
+
+  .rbc-toolbar button:active,
+  .rbc-toolbar button.rbc-active {
+    color: #373a3c !important;
+  }
+
+  .rbc-day-slot .rbc-time-slot {
+    border-top: none !important;
+  }
+
+  .rbc-agenda-event-cell p {
+    color: var(--text-theme-secondary) !important;
+  }
+
+  .rbc-day-slot .rbc-event-label {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .rbc-day-slot .rbc-event,
+  .rbc-day-slot .rbc-background-event {
+    overflow: visible !important;
+  }
+
+  .rbc-time-header.rbc-overflowing {
+    border-right: 1px solid transparent !important;
+  }
+
+  .rbc-time-content {
+    border-top: 1px solid #808080;
+  }
+
+  .rbc-label  {
+    width: 77.6369px !important;
+    min-width: 73.6369px !important;
+    max-width: 77.6369px !important;
+  }
+
+  .rbc-show-more {
+    color: #458EFF !important;
+    background: transparent !important;
+    font-weight: normal !important;
+  }
+
+  .rbc-event-label {
+    @apply text-theme-primary;
+  }
+}

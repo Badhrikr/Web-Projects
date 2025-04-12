@@ -1,0 +1,112 @@
+[
+  {
+    "componentId": "a19b349d-05a3-4bad-815a-76c43b07471797",
+    "componentName": "FrontEnd",
+    "migrationTypes": "Application",
+    "orderNo": 1,
+    "status": "Active",
+    "image": "/temp/assets/frontend.png",
+    "technologies": [
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "From",
+        "status": "Active"
+      },
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "To",
+        "status": "Active"
+      }
+    ]
+  },
+  {
+    "componentId": "a19b349d-05a3-4bad-815a-76c43b074717",
+    "componentName": "Middleware",
+    "migrationTypes": "Application",
+    "orderNo": 1,
+    "status": "Active",
+    "image": "/temp/assets/middleware.png",
+    "technologies": [
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "From",
+        "status": "Active"
+      },
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "To",
+        "status": "Active"
+      }
+    ]
+  },
+  {
+    "componentName": "Database",
+    "componentId": "a19b349d-05a3-4bad-815a-76c43b074718",
+    "migrationTypes": "Application,Database",
+    "orderNo": 1,
+    "status": "Active",
+    "image": "/temp/assets/database.png",
+    "technologies": [
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "From",
+        "status": "Active"
+      },
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "To",
+        "status": "Active"
+      }
+    ]
+  },
+  {
+    "componentId": "a19b349d-05a3-4bad-815a-76c43b074719",
+    "componentName": "Scheduler",
+    "migrationTypes": "Application,Batch",
+    "orderNo": 1,
+    "status": "Active",
+    "image": "/temp/assets/scheduler.png",
+    "technologies": [
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "From",
+        "status": "Active"
+      },
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "To",
+        "status": "Active"
+      }
+    ]
+  },
+  {
+    "componentId": "a19b349d-05a3-4bad-815a-76c43b074799",
+    "componentName": "Batch",
+    "migrationTypes": "Application,Batch",
+    "orderNo": 1,
+    "status": "Active",
+    "image": "/temp/assets/batch.png",
+    "technologies": [
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "From",
+        "status": "Active"
+      },
+      {
+        "id": "1de3df1e-1642-4262-b309-d5e7d4976c8b",
+        "technologyName": "Dotnet",
+        "technologyType": "To",
+        "status": "Active"
+      }
+    ]
+  }
+]

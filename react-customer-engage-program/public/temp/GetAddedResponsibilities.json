@@ -1,0 +1,16 @@
+[
+  {
+    "responsibilityId": "101",
+    "title": "Upload the source code",
+    "description": "Upload the source code of the migration project",
+    "owner": "Kumaran",
+    "ownerEmail": "kumaran@kumaran.com"
+  },
+  {
+    "responsibilityId": "102",
+    "title": "Code Documentation",
+    "description": "Upload the source code of the migration project",
+    "owner": "IHS Markit",
+    "ownerEmail": "customer1@testemail.com"
+  }
+]

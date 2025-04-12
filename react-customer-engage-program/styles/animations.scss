@@ -1,0 +1,82 @@
+.fly-enter {
+  transform-origin: top;
+  transform: scaleY(0);
+}
+.fly-enter-active {
+  transform: scaleY(1);
+  transition: transform 150ms;
+}
+.fly-exit {
+  transform-origin: top;
+  transform: scaleY(1);
+}
+.fly-exit-active {
+  transform: scaleY(0);
+  transition: transform 150ms;
+}
+
+.slide-up-enter {
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+.slide-up-enter-active {
+  transform: scaleY(1);
+  transition: transform 300ms;
+}
+.slide-up-exit {
+  transform-origin: bottom;
+  transform: scaleY(1);
+}
+.slide-up-exit-active {
+  transform: scaleY(0);
+  transition: transform 300ms;
+}
+
+.popup-enter {
+  transform: scale(0);
+}
+.popup-enter-active {
+  transform: scale(1);
+  transition: transform 150ms;
+}
+.popup-exit {
+  transform: scale(1);
+}
+.popup-exit-active {
+  transform: scale(0);
+  transition: transform 150ms;
+}
+
+.slide-right-left-enter {
+  transform-origin: right;
+  transform: translateX(100%);
+}
+.slide-right-left-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.slide-right-left-exit {
+  transform-origin: right;
+  transform: translateX(0);
+}
+.slide-right-left-exit-active {
+  transform: translateX(100%);
+  transition: transform 300ms;
+}
+
+.slide-left-right-enter {
+  transform-origin: left;
+  transform: translateX(-100%);
+}
+.slide-left-right-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.slide-left-right-exit {
+  transform-origin: left;
+  transform: translateX(0);
+}
+.slide-left-right-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
